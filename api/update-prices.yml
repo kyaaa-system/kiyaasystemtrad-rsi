@@ -1,0 +1,34 @@
+# .github/workflows/update-prices.yml
+# Auto-update data/prices.json setiap hari jam 06:00 UTC (13:00 WIB)
+# Jalankan manual: GitHub > Actions > Update Prices > Run workflow
+
+name: Update Prices
+
+on:
+  schedule:
+    # Setiap hari jam 06:00 UTC = 13:00 WIB (setelah pasar BEI buka)
+    - cron: '0 6 * * 1-5'  # Senin-Jumat saja
+  workflow_dispatch:  # Bisa dijalankan manual
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      - name: Generate prices.json
+        run: |
+          mkdir -p data
+          node generate-prices.js
+
+      - name: Commit and push
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add data/prices.json
+          git diff --cached --quiet || git commit -m "Update prices.json ($(date -u +%Y-%m-%d))"
+          git push
