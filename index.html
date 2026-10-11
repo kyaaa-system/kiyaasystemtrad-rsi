@@ -1,0 +1,571 @@
+<!DOCTYPE html>
+<html lang="id"><head>
+<script>(function(){var t;try{t=localStorage.getItem("kiy_theme")}catch(e){}if(t!=="dark"&&t!=="light")t=(window.matchMedia&&matchMedia("(prefers-color-scheme: dark)").matches)?"dark":"light";document.documentElement.setAttribute("data-theme",t)})()</script>
+<meta name="theme-color" content="#faf6ee"><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800&display=swap" rel="stylesheet">
+<title>KIYAAAA · KOMPAS100 Signal Engine</title>
+<style>
+:root{--c0:#faf6ee;--c1:#ffffff;--c2:#eef4fb;--c3:#d7e3f1;--c4:#1f3350;--c5:#566b83;--c6:#4a8fe0;--c7:#56b6dc;--c8:#17805a;--c9:#c43d5a;--c10:#7db3f2;--c11:#93c8ee;--c12:#abdcea;--c13:#d6e6fa99;--c14:#fbe9c288;--c15:#4a8fe033;--c16:#12304f;--c17:#ffffffe0;--c18:#56b6dc88;--c19:#56b6dc12;--c20:#56b6dc22;--c21:#1f335010;--c22:#4a8fe010;--c23:#d7e3f1aa;--c24:#4a8fe014;--c25:#2fb37f22;--c26:#e0627a22;--c27:#4a8fe022;--c28:#2f6fbf;--c29:#566b8322;--c30:#f4f8fd;--c31:#e0a526;--c32:#566b8377;--c33:#56b6dc14;--c34:#56b6dc55;--c35:#2fb37f;--c36:#e0627a;--c37:#e0627a44;--gr-rgb:47,179,127;--rd-rgb:224,98,122;color-scheme:light}
+:root[data-theme="dark"]{--c0:#0F172A;--c1:#1E293B;--c2:#253146;--c3:#334155;--c4:#E2E8F0;--c5:#94A3B8;--c6:#60A5FA;--c7:#38BDF8;--c8:#4ADE80;--c9:#F87171;--c10:#38BDF8;--c11:#60A5FA;--c12:#7DD3FC;--c13:#38BDF81c;--c14:#60A5FA12;--c15:#60A5FA33;--c16:#0B1220;--c17:#1E293Bd9;--c18:#38BDF888;--c19:#38BDF812;--c20:#38BDF822;--c21:#00000038;--c22:#38BDF810;--c23:#334155aa;--c24:#38BDF814;--c25:#10B98126;--c26:#EF444426;--c27:#60A5FA22;--c28:#7DD3FC;--c29:#94A3B822;--c30:#182236;--c31:#FBBF24;--c32:#94A3B877;--c33:#38BDF814;--c34:#38BDF855;--c35:#10B981;--c36:#EF4444;--c37:#EF444444;--gr-rgb:16,185,129;--rd-rgb:239,68,68;color-scheme:dark}
+:root[data-theme="dark"] .k b:not(.p):not(.n),:root[data-theme="dark"] .sm b:not(.p):not(.n){color:#FFFFFF}
+:root[data-theme="dark"] .card,:root[data-theme="dark"] .k{box-shadow:0 1px 2px #00000040,0 10px 28px #00000030}
+:root[data-theme="dark"] ::selection{background:#38BDF840}
+:root[data-theme="dark"] *{scrollbar-width:thin;scrollbar-color:#475569 transparent}
+:root[data-theme="dark"] ::-webkit-scrollbar{width:9px;height:9px}
+:root[data-theme="dark"] ::-webkit-scrollbar-thumb{background:#475569;border-radius:8px}
+:root[data-theme="dark"] ::-webkit-scrollbar-track{background:transparent}
+:root[data-theme="dark"] th{box-shadow:0 1px 0 #334155}
+
+:root{--bg:var(--c0);--p1:var(--c1);--p2:var(--c2);--bd:var(--c3);--tx:var(--c4);--mu:var(--c5);--bl:var(--c6);--tl:var(--c7);--gr:var(--c8);--rd:var(--c9);--gl:linear-gradient(135deg,var(--c10),var(--c11) 60%,var(--c12))}
+*{box-sizing:border-box}body{margin:0;background:radial-gradient(900px 480px at 88% -8%,var(--c13),transparent),radial-gradient(700px 460px at -8% 108%,var(--c14),transparent),var(--bg);color:var(--tx);font:14px/1.55 Nunito,"Plus Jakarta Sans",system-ui,-apple-system,"Segoe UI",sans-serif;display:flex;min-height:100vh}
+button,input,select{font:inherit;color:var(--tx);background:var(--p2);border:1px solid var(--bd);border-radius:9px;padding:7px 11px;outline:0;transition:.2s}
+input:focus,select:focus{border-color:var(--bl);box-shadow:0 0 0 3px var(--c15)}button{cursor:pointer}button:hover{border-color:var(--tl)}
+.pri{background:var(--gl);color:var(--c16);border:0;font-weight:700}.pri:hover{filter:brightness(1.1)}
+.p{color:var(--gr)}.n{color:var(--rd)}.mu{color:var(--mu)}
+nav{width:220px;flex:none;border-right:1px solid var(--bd);background:var(--c17);backdrop-filter:blur(6px);padding:18px 12px;display:flex;flex-direction:column;gap:6px;position:sticky;top:0;height:100vh}
+.logo{display:flex;align-items:center;gap:10px;font-weight:800;font-size:17px;margin:0 6px 18px}
+.lg{width:30px;height:30px;border-radius:10px;background:var(--gl);display:grid;place-items:center;color:var(--c16);font-weight:900;animation:glow 3s infinite}@keyframes glow{50%{box-shadow:0 0 18px var(--c18)}}
+nav a{padding:10px 12px;border-radius:10px;color:var(--mu);cursor:pointer;font-weight:600;transition:.2s}
+nav a:hover{background:var(--c19);color:var(--tx)}nav a.on{background:linear-gradient(90deg,var(--c15),var(--c20));color:var(--tx);box-shadow:inset 3px 0 var(--tl)}
+.eng{margin-top:auto;color:var(--mu);font-size:13px;display:flex;gap:8px;align-items:center}
+.dot{width:8px;height:8px;border-radius:50%;background:var(--gr);position:relative;flex:none}.dot::after{content:"";position:absolute;inset:0;border-radius:50%;background:var(--gr);animation:ping 1.6s infinite}@keyframes ping{to{transform:scale(3);opacity:0}}
+main{flex:1;padding:18px;display:flex;flex-direction:column;gap:14px;min-width:0}
+.card{background:var(--p1);border:1px solid var(--bd);border-radius:14px;padding:16px;box-shadow:0 1px 2px var(--c21),0 8px 20px var(--c22)}
+.hdr{display:flex;flex-wrap:wrap;gap:12px;align-items:center;justify-content:space-between}
+.hdr h1{margin:0;font-size:21px;display:inline}.bdg{background:var(--gl);color:var(--c16);font-size:11px;font-weight:800;padding:3px 9px;border-radius:20px;margin-left:8px;vertical-align:middle}
+.btns{display:flex;flex-wrap:wrap;gap:8px}
+.par{display:flex;flex-wrap:wrap;gap:14px;align-items:center}.par label{display:flex;gap:6px;align-items:center;color:var(--mu)}.par input{width:64px}
+.g4{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:12px}
+.g9{display:grid;grid-template-columns:repeat(auto-fit,minmax(140px,1fr));gap:10px}
+.k{position:relative;overflow:hidden;background:var(--p1);border:1px solid var(--bd);border-radius:12px;padding:13px 15px;box-shadow:0 1px 2px var(--c21);animation:up .5s backwards;animation-delay:calc(var(--i)*60ms);transition:.25s}
+.k:hover{transform:translateY(-3px);border-color:var(--tl);box-shadow:0 8px 24px var(--c20)}.k::before{content:"";position:absolute;left:0;top:0;height:2px;width:100%;background:var(--gl)}
+.k span{color:var(--mu);font-size:12px;text-transform:uppercase;letter-spacing:.4px}.k b{display:block;font-size:24px;margin:2px 0;font-variant-numeric:tabular-nums}.k small{color:var(--mu)}
+.g9 .k b{font-size:20px}
+@keyframes up{from{opacity:0;transform:translateY(10px)}to{opacity:1;transform:none}}
+h2{font-size:15px;margin:0 0 4px}.sub{color:var(--mu);margin:0 0 10px;font-size:13px}
+.w{overflow:auto;max-height:420px}table{border-collapse:collapse;width:100%;white-space:nowrap;font-variant-numeric:tabular-nums}
+th,td{padding:8px 10px;text-align:right;border-bottom:1px solid var(--c23)}th{position:sticky;top:0;background:var(--p2);color:var(--mu);font-size:12px;cursor:pointer}
+th:first-child,td:first-child{text-align:left}tbody tr{animation:up .3s backwards;animation-delay:calc(var(--i)*12ms)}tbody tr:hover{background:var(--c24)}
+.tg{padding:2px 8px;border-radius:20px;font-size:12px;font-weight:700}.BUY,.LONG,.hot{background:var(--c25);color:var(--gr)}.SELL{background:var(--c26);color:var(--rd)}.near{background:var(--c27);color:var(--c28)}
+.chips{display:flex;gap:6px}.chip{border-radius:20px;padding:5px 12px;font-size:13px}.chip.on{background:var(--gl);color:var(--c16);border:0;font-weight:700}
+.hm{display:grid;grid-template-columns:repeat(auto-fill,minmax(92px,1fr));gap:8px}
+.tile{border-radius:10px;padding:10px;cursor:pointer;border:1px solid var(--bd);animation:up .4s backwards;animation-delay:calc(var(--i)*10ms);transition:.2s}.tile:hover{transform:scale(1.06);z-index:2;border-color:var(--tx)}.tile b{display:block}.tile small{font-size:12px}
+svg{width:100%;height:auto;display:block}.ln{stroke-dasharray:1;stroke-dashoffset:1;animation:dr 1.6s ease forwards}@keyframes dr{to{stroke-dashoffset:0}}
+#prog{position:fixed;top:0;left:0;height:2px;width:0;background:var(--gl);z-index:60;transition:width .3s;box-shadow:0 0 10px var(--tl)}
+.note{color:var(--mu);font-size:13px;line-height:1.55}.note b{color:var(--tx)}
+.two{display:grid;grid-template-columns:250px 1fr;gap:12px;align-items:start}
+.slist{max-height:600px;overflow:auto;display:flex;flex-direction:column;gap:3px;margin-top:4px}
+.srow{display:flex;justify-content:space-between;align-items:center;padding:9px 10px;border-radius:9px;cursor:pointer;border:1px solid transparent;animation:up .3s backwards;animation-delay:calc(var(--i)*10ms)}
+.srow:hover{background:var(--c19)}.srow.on{background:linear-gradient(90deg,var(--c15),var(--c20));border-color:var(--bd)}
+.srow b{display:block;font-size:13px}.srow small{color:var(--mu);font-size:12px}
+.srow .pr{text-align:right}.srow .pr b{font-size:13px}
+.FLAT{background:var(--c29);color:var(--mu)}
+.dhdr{display:flex;flex-wrap:wrap;gap:10px;align-items:baseline;margin-bottom:2px}
+.dhdr .px{font-size:22px;font-weight:800}
+#sq{width:100%}
+.hmw{overflow:auto}.hmg{display:grid;grid-template-columns:64px repeat(12,minmax(54px,1fr)) 82px;gap:5px;min-width:820px;align-items:stretch}
+.hc{border-radius:8px;padding:9px 3px;text-align:center;font-size:12.5px;font-variant-numeric:tabular-nums;border:1px solid var(--bd);background:var(--c30)}
+.hc.hd{background:none;border:0;color:var(--mu);font-size:12px;padding:4px 0}.hc.yl{text-align:left;border:0;background:none;font-weight:800;padding-left:4px;display:flex;align-items:center}
+.hc[data-mo]{cursor:pointer;transition:.15s}.hc[data-mo]:hover{border-color:var(--tx);transform:scale(1.05)}.hc.sel{outline:2px solid var(--tl)}
+.hc .st{color:var(--c31);font-size:11px}.hc.em{color:var(--c32)}
+.nar{margin:0;padding:0;list-style:none;display:flex;flex-direction:column;gap:8px}.nar li{padding:9px 12px;border-radius:10px;background:var(--c30);border:1px solid var(--bd);line-height:1.6}
+.nar b.yy{color:var(--tl);margin-right:4px}
+.warn{border-color:var(--rd)!important}tr.sel td{background:var(--c33)}tr[data-mo]{cursor:pointer}
+.mq{overflow:hidden;border:1px solid var(--bd);border-radius:12px;background:var(--c1);white-space:nowrap;height:38px}
+.mq #mq{display:inline-block;padding-left:100%;animation:mq var(--dur,120s) linear infinite;line-height:38px}
+.mq:hover #mq{animation-play-state:paused}@keyframes mq{to{transform:translateX(-100%)}}
+.mq .it{margin-right:30px;cursor:pointer;font-size:12.5px;transition:.15s}.mq .it b{margin-right:5px}.mq .it:hover,.mq .it.on{color:var(--tl)}.mq .it.on b{text-decoration:underline}
+#selbar{display:flex;flex-direction:column;gap:10px;border-color:var(--c34);box-shadow:0 0 24px var(--c33)}
+.sh{display:flex;flex-wrap:wrap;gap:12px;align-items:center}.sh input{width:104px;font-weight:800;font-size:15px;text-transform:uppercase}.sh .px{font-size:22px;font-weight:800}
+.sh .sp{flex:1}.sms{display:grid;grid-template-columns:repeat(auto-fit,minmax(112px,1fr));gap:8px}
+.sm{background:var(--c30);border:1px solid var(--bd);border-radius:10px;padding:7px 10px;transition:.2s}.sm:hover{border-color:var(--tl);transform:translateY(-2px)}
+.sm span{display:block;color:var(--mu);font-size:12px}.sm b{font-size:15px;font-variant-numeric:tabular-nums}
+.fx{position:fixed;inset:0;pointer-events:none;overflow:hidden;z-index:0}.fx span{position:absolute;bottom:-50px;opacity:.10;animation:fl linear infinite}@keyframes fl{to{transform:translateY(-115vh) rotate(25deg)}}
+nav{z-index:1}main{position:relative;z-index:1}
+.mas{display:inline-block;font-size:19px;margin-right:6px;animation:bob 2.2s ease-in-out infinite;vertical-align:middle}@keyframes bob{50%{transform:translateY(-6px) rotate(-8deg)}}
+.lg{font-size:16px}.k .ic{position:absolute;right:11px;top:10px;font-size:14px;opacity:.9;font-style:normal;animation:bob 3s ease-in-out infinite;animation-delay:calc(var(--i)*.2s)}
+.k:hover .ic{animation:spin .6s}@keyframes spin{to{transform:rotate(360deg) scale(1.3)}}
+nav a:hover{transform:translateX(4px)}button:hover{transform:translateY(-2px)}button:active{transform:scale(.95)}
+.BUY,.hot{animation:pulse 1.8s infinite}@keyframes pulse{50%{box-shadow:0 0 0 4px rgba(var(--gr-rgb),.2)}}
+.idx{display:flex;align-items:center;gap:14px;flex-wrap:wrap;border-width:2px;margin-bottom:12px}.idx .big{font-size:22px;animation:bob 2s infinite}.idx.on{border-color:var(--gr)}.idx.off{border-color:var(--rd)}.idx h2{margin:0}
+@media(max-width:800px){.two{grid-template-columns:1fr}.slist{max-height:280px}body{flex-direction:column}nav{width:100%;height:auto;position:static;flex-direction:row;overflow-x:auto;padding:8px}.logo,.eng{display:none}nav a{white-space:nowrap}}
+
+.cg{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(500px,100%),1fr));gap:12px}.cg .card{overflow-x:auto}.cg svg{min-width:480px}
+.cg h2{display:flex;align-items:center;gap:6px}.cg h2 i{font-style:normal;font-size:14px}
+.hb{display:flex;flex-direction:column;gap:7px;margin-top:6px}.hb div{display:grid;grid-template-columns:54px 1fr 64px;gap:8px;align-items:center;font-variant-numeric:tabular-nums}
+.hb em{display:block;height:11px;border-radius:6px;font-style:normal}.hb b{text-align:right}
+.pill{display:inline-block;padding:2px 9px;border-radius:20px;background:var(--p2);color:var(--tx);font-size:12px;font-weight:700;margin-right:6px}
+button:focus-visible,input:focus-visible,select:focus-visible,nav a:focus-visible{outline:2px solid var(--bl);outline-offset:2px}
+@media(prefers-reduced-motion:reduce){*{animation-duration:.01ms!important;animation-iteration-count:1!important;transition:none!important}}
+</style></head><body>
+<div id="prog"></div>
+<nav><div class="logo"><div class="lg">🐂</div>KIYAAAA</div>
+<a data-v="dash" class="on">📊 Dashboard</a><a data-v="cari">🔍 Cari Saham</a><a data-v="sig">⚡ Sinyal &amp; Posisi</a><a data-v="hist">🕘 Riwayat Trade</a><a data-v="map">🗺 Peta Performa</a><a data-v="eq">📈 Equity Curve</a><a data-v="bln">📅 Historis Bulanan &amp; Tahunan</a>
+<div class="eng"><span class="dot"></span>Engine Active</div></nav>
+<main>
+<div class="mq"><div id="mq"></div></div>
+<div class="card" id="selbar" style="display:none"></div><datalist id="tkl"></datalist>
+<div class="card hdr"><div><span class="mas">🚀</span><h1>KIYAAAA</h1><span class="bdg">KOMPAS100 SIGNAL ENGINE</span>
+<div class="mu" style="margin-top:6px"><span id="stt">● Belum dimuat</span></div></div>
+<div class="btns"><button id="bTh" title="Ganti tampilan terang / gelap (pilihan tersimpan)">🌙 Mode Gelap</button><button id="bUp">📂 Upload JSON</button><button id="bSn" title="Simpan semua harga yang sudah termuat ke satu file JSON. Buka lagi kapan saja lewat Upload JSON: langsung lengkap tanpa proxy.">💾 Simpan Snapshot</button><button class="pri" id="bYf">🌐 Harga Yahoo</button><button id="bMs" title="Muat ulang hanya simbol yang gagal / cache lama, satu per satu pelan-pelan">🩹 Muat yang Gagal</button><button id="bDm">🎲 Data Dummy</button><button id="bRc">🔄 Hitung Ulang</button><input type="file" id="fl" accept=".json" hidden></div></div>
+<div class="card note">💡 File HTML ini <b>berdiri sendiri</b> — cukup dibuka langsung di browser, tidak perlu server/Node.js. Harga harian KOMPAS100 diambil dari <b>Yahoo Finance</b> lewat proxy CORS publik langsung dari browser. Data tersimpan di browser, jadi pembukaan berikutnya langsung tampil sementara harga diperbarui di latar belakang. Klik <b>Harga Yahoo</b> untuk memuat ulang; proxy gratis kadang lambat/limit, jadi kalau ada simbol yang gagal, klik <b>Muat yang Gagal</b>. <b>Simpan Snapshot</b> menyimpan semua harga ke satu file JSON; buka lagi lewat <b>Upload JSON</b> untuk tampil seketika dan lengkap tanpa proxy (nama file jangan diganti jadi <code>data/prices.json</code> kalau sudah di-hosting, supaya harga live tetap dipakai). Bisa juga <b>Upload JSON</b> sendiri; kalau Yahoo/proxy gagal total, dashboard memakai data tersimpan terakhir atau <b>data dummy</b>. Strategi: <b>RSI cross 50</b> (Buy naik lewat level, Sell turun lewat level), eksekusi di <b>open bar berikutnya</b>. Harga pemicu dibulatkan mengikuti <b>fraksi harga BEI</b>.</div>
+<div class="card par"><label>RSI Period <input id="per" type="number" value="14" min="2" max="50"></label><label>Level <input id="lvl" type="number" value="50"></label>
+<label>Range <select id="rng"><option>2y</option><option selected>3y</option><option>5y</option><option>10y</option><option value="max">Maks</option></select></label><span class="mu" id="cnt" style="margin-left:auto"></span></div>
+<div id="view"></div>
+</main>
+<script>
+const TK="AADI ACES ADMR ADRO AKRA AMMN AMRT ANTM ARCI ARTO ASII BBCA BBNI BBRI BBTN BBYB BFIN BIPI BKSL BMRI BNBR BRIS BRMS BRPT BSDE BUKA BULL BUMI BUVA CBDK CMRY COIN CPIN CTRA CUAN DEWA DSNG ELSA EMAS EMTK ENRG ERAA ESSA EXCL GGRM GOTO HEAL HRTA HRUM ICBP IMPC INCO INDF INDY INET INKP ISAT ITMG JPFA JSMR KIJA KLBF KPIG LSIP MAPA MAPI MBMA MDKA MEDC MIKA MINA MYOR NCKL PANI PGAS PGEO PNLF PSAB PTBA PTRO PWON RAJA RATU RMKE SCMA SGER SMGR SMIL SMRA SSIA TAPG TINS TLKM TOBA TOWR TPIA UNTR UNVR WIFI WIRG".split(" ");
+const $=i=>document.getElementById(i);
+const S={raw:{},R:[],v:"dash",mo:null,yf:"",src:"",upd:null,busy:0,fl:"",pf:"all",sk:"net",sd:-1,sel:"",q:"",cf:"semua"};
+const f=(x,d=2)=>x==null||!isFinite(x)?"–":x.toLocaleString("id-ID",{minimumFractionDigits:d,maximumFractionDigits:d});
+const cl=x=>x>0?"p":x<0?"n":"";const pc=x=>x==null?"–":`<span class="${cl(x)}">${x>0?"+":""}${f(x)}%</span>`;
+const dt=d=>new Date(d*864e5).toLocaleDateString("id-ID",{day:"2-digit",month:"short",year:"2-digit"});
+const MN=["Jan","Feb","Mar","Apr","Mei","Jun","Jul","Agu","Sep","Okt","Nov","Des"],MF=m=>MN[m.m]+" "+m.y,sp=v=>v==null||!isFinite(v)?"–":(v>0?"+":"")+f(v)+"%",rp=v=>v==null?"–":`<span class="${cl(v)}">${v<0?"-":v>0?"+":""}Rp${f(Math.abs(v),1)} jt</span>`;
+const tick=p=>p<200?1:p<500?2:p<2000?5:p<5000?10:25;
+const sleep=ms=>new Promise(r=>setTimeout(r,ms));
+// Cache harga di IndexedDB (kapasitas besar; cadangan localStorage) -> pembukaan berikutnya langsung tampil
+const CK="kiy_last";
+const idb=()=>new Promise((res,rej)=>{const r=indexedDB.open("kiyaaa",1);r.onupgradeneeded=()=>r.result.createObjectStore("kv");r.onsuccess=()=>res(r.result);r.onerror=()=>rej(r.error)});
+async function cacheGet(){try{const db=await idb();return await new Promise((res,rej)=>{const q=db.transaction("kv").objectStore("kv").get(CK);q.onsuccess=()=>res(q.result||null);q.onerror=()=>rej(q.error)})}catch(e){try{return JSON.parse(localStorage.getItem(CK))}catch(_){return null}}}
+async function cacheSet(v){try{const db=await idb();await new Promise((res,rej)=>{const tx=db.transaction("kv","readwrite");tx.objectStore("kv").put(v,CK);tx.oncomplete=res;tx.onerror=()=>rej(tx.error)})}catch(e){try{localStorage.setItem(CK,JSON.stringify(v))}catch(_){}}}
+
+// ===== RSI Wilder (setara AmiBroker) + rata-rata gain/loss terakhir =====
+function rsi(c,p){const o=new Array(c.length).fill(null);let G=0,L=0;if(c.length<=p)return{o,G,L};
+ for(let i=1;i<=p;i++){const d=c[i]-c[i-1];d>0?G+=d:L-=d}G/=p;L/=p;o[p]=L?100-100/(1+G/L):100;
+ for(let i=p+1;i<c.length;i++){const d=c[i]-c[i-1];G=(G*(p-1)+(d>0?d:0))/p;L=(L*(p-1)+(d<0?-d:0))/p;o[i]=L?100-100/(1+G/L):100}return{o,G,L}}
+
+// ===== Logika AFL: Buy=Cross(RSI,Lvl) Sell=Cross(Lvl,RSI) ExRem, delay 1 bar =====
+function analyze(t,D,per,lvl){
+ const{d,o,c}=D,n=c.length,{o:r,G,L}=rsi(c,per),sig=new Array(n).fill(0);let pos=0;
+ for(let i=1;i<n;i++){if(r[i]==null||r[i-1]==null)continue;
+  if(r[i]>lvl&&r[i-1]<=lvl&&!pos){sig[i]=1;pos=1}else if(r[i]<lvl&&r[i-1]>=lvl&&pos){sig[i]=-1;pos=0}}
+ const tr=[];let en=null;
+ for(let i=0;i<n-1;i++){if(sig[i]==1&&!en)en={i:i+1,p:o[i+1]};
+  else if(sig[i]==-1&&en){const x=o[i+1];tr.push({t,inD:d[en.i],outD:d[i+1],ep:en.p,xp:x,pnl:(x/en.p-1)*100,bars:i+1-en.i});en=null}}
+ let act=null;
+ if(en)act={t,inD:d[en.i],ep:en.p,last:c[n-1],pnl:(c[n-1]/en.p-1)*100,bars:n-1-en.i};
+ else if(sig[n-1]==1)act={t,pend:1,last:c[n-1],bars:0};
+ const sigs=[];for(let i=Math.max(0,n-7);i<n;i++)if(sig[i])sigs.push({t,i,s:sig[i],d:d[i],c:c[i],r:r[i],today:i==n-1});
+ // harga pemicu besok (dibulatkan ke fraksi BEI)
+ const RS=lvl/(100-lvl),c0=c[n-1],tk=tick(c0);let buyTrig=null,sellTrig=null;
+ if(r[n-1]!=null&&!act&&r[n-1]<lvl){const x=(per-1)*(RS*L-G);let P=c0+x;if(x>0){let T=Math.ceil(P/tk-1e-9)*tk;if(T<=P)T+=tk;buyTrig={p:T,dist:(T/c0-1)*100}}}
+ if(r[n-1]!=null&&act&&!act.pend&&r[n-1]>lvl){const x=(G*(per-1))/RS-L*(per-1);if(x>0){let P=c0-x,T=Math.floor(P/tk+1e-9)*tk;if(T>=P)T-=tk;if(T>0)sellTrig={p:T,dist:(1-T/c0)*100}}}
+ const st=sig[n-1]==1?"BUY":sig[n-1]==-1?"SELL":act?"LONG":"FLAT";
+ const chg=n>1?(c0/c[n-2]-1)*100:null;
+ return{t,d,c,r,sig,tr,act,sigs,st,last:c0,chg,rsi:r[n-1],up:n>2&&r[n-1]!=null&&r[n-2]!=null?r[n-1]>=r[n-2]:null,buyTrig,sellTrig,stats:stats(tr),lastD:d[n-1]}}
+
+function stats(tr){
+ const w=tr.filter(x=>x.pnl>0),l=tr.filter(x=>x.pnl<=0),m=a=>a.length?a.reduce((s,x)=>s+x,0)/a.length:null;
+ const gp=w.reduce((s,x)=>s+x.pnl,0),gl=-l.reduce((s,x)=>s+x.pnl,0);
+ let eq=1,pk=1,dd=0;tr.slice().sort((a,b)=>a.outD-b.outD).forEach(x=>{eq*=1+x.pnl/100;pk=Math.max(pk,eq);dd=Math.max(dd,(pk-eq)/pk*100)});
+ return{n:tr.length,net:tr.length?(eq-1)*100:null,avg:m(tr.map(x=>x.pnl)),pf:gl>0?gp/gl:gp>0?Infinity:null,aw:m(w.map(x=>x.pnl)),al:m(l.map(x=>x.pnl)),
+  wr:tr.length?w.length/tr.length*100:null,dd:tr.length?dd:null,bw:m(w.map(x=>x.bars)),bl:m(l.map(x=>x.bars))}}
+// Portofolio: modal dibagi rata ke N saham; tiap trade bernilai 1/N ekuitas awal
+function port(){
+ const all=S.R.flatMap(r=>r.tr).sort((a,b)=>a.outD-b.outD),N=Math.max(1,S.R.filter(r=>r.tr.length).length),s=stats(all),pts=[];
+ let eq=1,pk=1,pkD=all.length?Math.min(...all.map(x=>x.inD)):0,dd=0;all.forEach(x=>{eq+=x.pnl/100/N;if(eq>pk){pk=eq;pkD=x.outD}const d=(pk-eq)/pk*100;dd=Math.max(dd,d);pts.push({d:x.outD,eq,dd:d})});
+ s.net=all.length?(eq-1)*100:null;s.dd=all.length?dd:null;s.pts=pts;
+ // Highest equity = puncak kurva ekuitas portofolio (modal awal = 0%); fromPeak = jarak ekuitas sekarang ke puncak
+ s.peak=pk;s.peakPct=all.length?(pk-1)*100:null;s.peakD=pkD;s.fromPeak=all.length?(pk-eq)/pk*100:null;
+ // % profitable stock = saham dengan net profit (compound semua trade tertutupnya) > 0, dari saham yang punya trade
+ const wt=S.R.filter(r=>r.tr.length),wp=wt.filter(r=>r.stats.net>0).length;s.psN=wp;s.psTot=wt.length;s.psPct=wt.length?wp/wt.length*100:null;
+ const t0=all.length?Math.min(...all.map(x=>x.inD)):0,t1=all.length?Math.max(...all.map(x=>x.outD)):0,yrs=all.length?(t1-t0)/365.25:0;
+ const M=monthly(all,N,S.R.length?Math.max(...S.R.map(r=>r.lastD)):0);s.mo=M.mo;s.yr=M.yr;
+ s.yrs=yrs;s.eqEnd=eq;s.cagr=all.length&&yrs>=.25&&eq>0?(Math.pow(eq,1/yrs)-1)*100:null;s.calmar=s.cagr!=null&&s.dd>0?s.cagr/s.dd:null;return s}
+
+// ===== Historis bulanan & tahunan (dari trade tertutup hasil data Yahoo) =====
+// Ekuitas mengikuti kurva portofolio: tiap trade = 1/N modal, direalisasikan di tanggal SELL.
+// Highest equity bulanan = seberapa persen ekuitas bulan itu melampaui puncak ekuitas SEBELUM bulan tsb (0 jika tidak ada rekor baru).
+function monthly(all,N,endD){
+ if(!all.length)return{mo:[],yr:[]};
+ const mk=d=>{const x=new Date(d*864e5);return x.getUTCFullYear()*12+x.getUTCMonth()};
+ const k0=mk(all[0].outD),k1=Math.max(mk(all[all.length-1].outD),endD?mk(endD):0),by={};
+ all.forEach(x=>{const k=mk(x.outD);(by[k]=by[k]||[]).push(x)});
+ let eq=1,pk=1,ypk=1,cnt=0;const mo=[];
+ for(let k=k0;k<=k1;k++){
+  if(k==k0||k%12==0)ypk=eq;
+  const tr=by[k]||[],e0=eq,pk0=pk,st={};let hi=eq,mdd=0,w=0,sum=0,best=null,worst=null;
+  tr.forEach(x=>{eq+=x.pnl/100/N;hi=Math.max(hi,eq);pk=Math.max(pk,eq);ypk=Math.max(ypk,eq);mdd=Math.max(mdd,(ypk-eq)/ypk*100);
+   if(x.pnl>0)w++;sum+=x.pnl;if(!best||x.pnl>best.pnl)best=x;if(!worst||x.pnl<worst.pnl)worst=x;
+   const q=st[x.t]||(st[x.t]={t:x.t,n:0,w:0,contrib:0,sum:0});q.n++;if(x.pnl>0)q.w++;q.contrib+=x.pnl/N;q.sum+=x.pnl});
+  const nh=hi>pk0*(1+1e-12)?(hi/pk0-1)*100:0;
+  if(nh>0)cnt++;
+  mo.push({nhC:cnt,nhP:cnt/(mo.length+1)*100,k,y:Math.floor(k/12),m:k%12,e0,e1:eq,ret:(eq/e0-1)*100,profit:(eq-e0)*100,n:tr.length,w,l:tr.length-w,wr:tr.length?w/tr.length*100:null,avg:tr.length?sum/tr.length:null,
+   best,worst,hi,hiPct:(hi-1)*100,hiG:(hi/e0-1)*100,pk0,pk1:pk,nh,dd:mdd,tr:tr.slice().sort((a,b)=>b.pnl-a.pnl),stk:Object.values(st).sort((a,b)=>b.contrib-a.contrib)})}
+ const yr=[...new Set(mo.map(m=>m.y))].map(y=>{
+  const ms=mo.filter(m=>m.y==y),e0=ms[0].e0,e1=ms[ms.length-1].e1,n=ms.reduce((a,m)=>a+m.n,0),w=ms.reduce((a,m)=>a+m.w,0),act=ms.filter(m=>m.n);
+  const mx=(a,fn)=>a.reduce((b,m)=>fn(m)>fn(b)?m:b,a[0]),nhm=ms.filter(m=>m.nh>0),stk={};
+  ms.forEach(m=>m.stk.forEach(q=>{const z=stk[q.t]||(stk[q.t]={t:q.t,n:0,w:0,contrib:0});z.n+=q.n;z.w+=q.w;z.contrib+=q.contrib}));
+  const pk0=ms[0].pk0,pk1=ms[ms.length-1].pk1;
+  return{y,mths:ms.length,e0,e1,ret:(e1/e0-1)*100,profit:(e1-e0)*100,n,w,wr:n?w/n*100:null,avg:n?ms.reduce((a,m)=>a+(m.avg||0)*m.n,0)/n:null,
+   pos:ms.filter(m=>m.ret>0).length,neg:ms.filter(m=>m.ret<0).length,bm:mx(ms,m=>m.ret),wm:mx(ms,m=>-m.ret),dd:Math.max(...ms.map(m=>m.dd)),
+   nhN:nhm.length,nhB:nhm.length?mx(nhm,m=>m.nh):null,nhY:pk1>pk0*(1+1e-12)?(pk1/pk0-1)*100:0,pk1,stk:Object.values(stk).sort((a,b)=>b.contrib-a.contrib),act:act.length}});
+ return{mo,yr}}
+
+// ===== Data =====
+function recompute(){
+ const per=+$("per").value,lvl=+$("lvl").value;
+ S.R=Object.keys(S.raw).filter(t=>S.raw[t].c&&S.raw[t].c.length>per+2).map(t=>analyze(t,S.raw[t],per,lvl)).sort((a,b)=>a.t<b.t?-1:1);
+ const ld=S.R.length?Math.max(...S.R.map(r=>r.lastD)):null;
+ if(!S.R.find(x=>x.t==S.sel)){const f0=S.R.find(x=>x.act)||S.R[0];S.sel=f0?f0.t:""}
+ mq();
+ $("cnt").textContent=`${S.R.length} simbol dimuat`;
+ $("stt").innerHTML=`<span class="dot" style="display:inline-block;margin-right:6px"></span>SYSTEM ACTIVE • UPDATE ${S.src||"–"}${ld?` (data terakhir ${dt(ld)})`:""}`;
+ draw()}
+// ===== Yahoo Finance langsung dari browser lewat CORS proxy publik =====
+// Yahoo tidak mengizinkan fetch() lintas-origin dari browser (tidak ada header CORS di respons-nya),
+// jadi diteruskan lewat proxy publik yang MENAMBAHKAN header CORS. Ini murni file HTML statis,
+// tidak butuh server/Node.js sendiri - tapi proxy publik gratis begini kadang lambat/limit/down,
+// makanya dicoba beberapa alternatif berurutan per simbol sebelum menyerah.
+const PROXIES=[
+ u=>`https://api.allorigins.win/get?url=${encodeURIComponent(u)}`,
+ u=>`https://api.allorigins.win/raw?url=${encodeURIComponent(u)}`,
+ u=>`https://api.codetabs.com/v1/proxy?quest=${encodeURIComponent(u)}`,
+ u=>`https://corsproxy.io/?url=${encodeURIComponent(u)}`,
+];
+async function fetchT(url,ms){
+ // Catatan: sengaja TIDAK pakai AbortController/AbortSignal di sini. Beberapa ekstensi
+ // browser (ad-blocker/antivirus/password-manager) menyadap fetch() dan meneruskannya lewat
+ // postMessage - dan AbortSignal tidak bisa dikirim lewat postMessage, jadi selalu error
+ // "Failed to execute 'postMessage': AbortSignal object could not be cloned". Promise.race
+ // di bawah ini tetap memberi efek timeout tanpa pernah menyentuh AbortSignal.
+ return Promise.race([
+  fetch(url),
+  new Promise((_,rej)=>setTimeout(()=>rej(new Error("timeout")),ms))
+ ]);
+}
+// Ambil & validasi satu respons chart lewat satu proxy
+async function getChart(mk,target){
+ const r=await fetchT(mk(target),7000);
+ if(r.status==429){NET.r429++;throw new Error("rate limited (proxy)")}
+ if(!r.ok)throw new Error("HTTP "+r.status);
+ let j=await r.json();if(j&&typeof j.contents==="string")j=JSON.parse(j.contents);
+ const x=j.chart&&j.chart.result&&j.chart.result[0];
+ if(!x||!x.timestamp)throw new Error("data kosong");
+ const q=x.indicators.quote[0],d=[],o=[],c=[];
+ x.timestamp.forEach((s,i)=>{if(q.close[i]!=null&&q.open[i]!=null){d.push(Math.floor(s/86400));o.push(+q.open[i].toFixed(2));c.push(+q.close[i].toFixed(2))}});
+ if(!c.length)throw new Error("tidak ada bar");
+ NET.ok++;return{d,o,c}}
+// Proxy diurutkan menurut kecepatan & keandalan yang baru dialami (belajar selama memuat). Berikutnya dimulai segera kalau
+// yang sebelumnya gagal, atau setelah ±1,1-3,5 dtk (adaptif) kalau masih menunggu; yang tercepat menang.
+const NET={r429:0,ok:0};
+const PX=PROXIES.map(mk=>({mk,ms:1500,bad:0}));
+function hedged(target){return new Promise((resolve,reject)=>{
+ let done=false,next=0,running=0,last="";const ord=PX.slice().sort((a,b)=>(a.ms+a.bad*4000)-(b.ms+b.bad*4000)),N=ord.length;
+ const launch=()=>{if(done||next>=N)return;const px=ord[next++],t0=Date.now();running++;const tm=setTimeout(launch,Math.min(3500,Math.max(1100,ord[0].ms*2)));
+  getChart(px.mk,target).then(v=>{px.ms=px.ms*.6+(Date.now()-t0)*.4;px.bad=Math.max(0,px.bad-1);if(!done){done=true;clearTimeout(tm);resolve(v)}}).catch(e=>{px.bad=Math.min(5,px.bad+1);last=e.message;clearTimeout(tm);running--;if(!done){if(next<N)launch();else if(running==0)reject(new Error(last))}})};
+ launch()})}
+async function oneYahoo(t,range,bust){
+ let err="";
+ if(location.protocol.startsWith("http")&&!/github\.io$/.test(location.hostname)){
+  try{const r=await fetchT(`/api/chart?s=${encodeURIComponent(t)}&range=${range}&lite=1${bust?"&_="+Date.now()+bust:""}`,15000);
+   if(r.ok){const j=await r.json();if(j&&j.d&&j.c&&j.c.length)return{ok:1,v:j}}else err="API HTTP "+r.status}catch(e){err=e.message}}
+ for(const host of (bust?["query1","query2"]:["query1"])){
+  const target=`https://${host}.finance.yahoo.com/v8/finance/chart/${t}.JK?range=${range}&interval=1d${bust?"&_="+Date.now()+bust:""}`;
+  try{return{ok:1,v:await hedged(target)}}catch(e){err=e.message}
+ }
+ return{ok:0,err};
+}
+// Sumber utama: data/prices.json (diisi GitHub Actions dari Yahoo Finance, tanpa CORS/proxy).
+// Kalau tidak ada / gagal (mis. dibuka via file://), jatuh ke proxy publik (yahooProxy).
+async function yahoo(){
+ if(S.busy)return;
+ if(location.protocol.startsWith("http")){
+  try{const r=await fetch("data/prices.json?_="+Date.now(),{cache:"no-store"});
+   if(r.ok){const j=await r.json(),src=j.data||{},yrs={"2y":2,"3y":3,"5y":5,"10y":10}[$("rng").value],raw={};
+    Object.keys(src).forEach(t=>{const x=src[t];if(!x||!x.d||!x.c||!x.c.length)return;let i=0;
+     if(yrs){const cut=x.d[x.d.length-1]-yrs*365.25;i=x.d.findIndex(v=>v>=cut);if(i<0)i=0}
+     raw[t]={d:x.d.slice(i),o:x.o.slice(i),c:x.c.slice(i)}});
+    const ks=Object.keys(raw);
+    if(ks.length>=TK.length*.5){S.ds={upd:ks,cache:[],miss:TK.filter(t=>!raw[t])};S.raw=raw;
+     S.src="Yahoo Finance (GitHub Actions, diperbarui "+new Date(j.updated).toLocaleString("id-ID")+")"+(S.ds.miss.length?" — ⚠ "+S.ds.miss.length+" simbol tanpa data":"");
+     cacheSet({raw,t:Date.now()});
+     recompute();return}}}catch(e){}}
+ return yahooProxy()}
+async function yahooProxy(){
+ if(S.busy)return;S.busy=1;$("bYf").disabled=true;
+ const rng=$("rng").value,hosted=location.protocol.startsWith("http"),T0=Date.now(),MAXC=hosted?16:12;
+ let lim=hosted?14:8,ok=0,done=0,errMsg="",lastShow=0,lastT=0;const raw={},q=TK.slice();
+ // cache dibaca dulu: simbol yang belum punya cache dimuat lebih dulu supaya layar cepat terisi 100 simbol
+ const l0=await cacheGet().catch(()=>null),old=(l0&&l0.raw)||{};
+ q.sort((x,y)=>(old[x]?1:0)-(old[y]?1:0));
+ const stt=()=>{$("stt").textContent=`● Memuat harga Yahoo ${ok}/${TK.length} · ${((Date.now()-T0)/1000).toFixed(0)} dtk`+(lim<8&&!hosted?" · proxy membatasi, diperlambat…":"")};
+ // Tampilkan hasil sementara (digabung cache untuk simbol yang belum datang), ditahan min. 2,5 dtk antar-render
+ const show=()=>{const now=Date.now(),need=S.R.length?25:12;if(ok-lastShow<need||now-lastT<2500)return;lastShow=ok;lastT=now;
+  const m=Object.assign({},old,raw);S.raw=m;S.ds={upd:Object.keys(raw),cache:TK.filter(t=>!raw[t]&&old[t]),miss:TK.filter(t=>!m[t])};
+  S.src=`Yahoo Finance (sedang memuat ${ok}/${TK.length})`;recompute()};
+ // Pengatur konkurensi adaptif: naik pelan (+1 tiap 10 respons sukses) sampai batas, turun 30% bila proxy membalas 429
+ const cc={seen:NET.r429,okMark:NET.ok,t:0};
+ const ctl=()=>{const now=Date.now();
+  if(NET.r429>cc.seen&&now-cc.t>1500){lim=Math.max(4,Math.floor(lim*.7));cc.seen=NET.r429;cc.t=now;cc.okMark=NET.ok}
+  else if(NET.ok-cc.okMark>=10&&lim<MAXC){lim++;cc.okMark=NET.ok}};
+ stt();
+ // Ronde 1: banyak pekerja paralel; kalau proxy membalas 429 jumlah pekerja otomatis diturunkan
+ await Promise.all(Array.from({length:MAXC},async(_,w)=>{
+  while(q.length){
+   if(w>=lim){await sleep(300);continue}
+   const t=q.shift(),r=await oneYahoo(t,rng);
+   if(r.ok){raw[t]=r.v;ok++}else{errMsg=r.err;if(/rate limited|429/.test(r.err||""))lim=Math.max(4,lim-2)}
+   $("prog").style.width=++done/TK.length*100+"%";ctl();stt();show();
+   if(!hosted)await sleep(20);
+  }}));
+ // Ronde ulang (sampai 5x) khusus simbol yang belum termuat: URL dibuat berbeda (lewati cache proxy) + server Yahoo kedua, jeda makin panjang
+ for(let rd=0;rd<5;rd++){const q2=TK.filter(t=>!raw[t]);if(!q2.length)break;
+  $("stt").textContent=`● Ulangi ronde ${rd+1}/5 — ${q2.length} simbol belum termuat (${ok}/${TK.length} sudah)…`;
+  if(rd)await sleep(700*rd);
+  await Promise.all(Array.from({length:Math.max(3,5-rd)},async()=>{
+   while(q2.length){const t=q2.shift(),r=await oneYahoo(t,rng,rd+1);
+    if(r.ok){raw[t]=r.v;ok++;$("prog").style.width=Math.min(100,ok/TK.length*100)+"%"}else errMsg=r.err;
+    stt();show();await sleep(120+rd*100);
+   }}));
+ }
+ S.shown=0;setTimeout(()=>$("prog").style.width=0,500);$("bYf").disabled=false;S.busy=0;
+ const dur=((Date.now()-T0)/1000).toFixed(0);
+ if(ok||(l0&&l0.raw)){
+  const upd=Object.keys(raw),cch=[];
+  TK.forEach(t=>{if(!raw[t]&&old[t]){raw[t]=old[t];cch.push(t)}});
+  const miss=TK.filter(t=>!raw[t]);S.ds={upd,cache:cch,miss};S.raw=raw;
+  S.src=ok?`Yahoo Finance`+(cch.length?` — ${cch.length} simbol pakai cache lama`:"")+(miss.length?` — ⚠ ${miss.length} simbol TANPA data, hasil tidak lengkap`:` — semua ${TK.length} simbol lengkap (${dur} dtk)`):`data tersimpan (${new Date(l0.t).toLocaleString("id-ID")}) — Yahoo/proxy gagal`;
+  if(ok)cacheSet({raw,t:Date.now()});
+  recompute()}
+ else $("stt").innerHTML=`<span class="n">✖ Yahoo gagal lewat semua proxy (${errMsg||"?"}).</span> Coba klik <b>Harga Yahoo</b> lagi sebentar lagi (proxy publik sering sibuk), atau pakai Upload JSON / Data Dummy.`}
+function applyTheme(t,save){
+ document.documentElement.setAttribute("data-theme",t);
+ const m=document.querySelector('meta[name="theme-color"]');if(m)m.content=t=="dark"?"#0F172A":"#faf6ee";
+ const b=document.getElementById("bTh");if(b)b.textContent=t=="dark"?"☀️ Mode Terang":"🌙 Mode Gelap";
+ if(save){try{localStorage.setItem("kiy_theme",t)}catch(e){}}}
+function toggleTheme(){applyTheme(document.documentElement.getAttribute("data-theme")=="dark"?"light":"dark",true);if(S.R&&S.R.length)draw()}
+const ha=(k,a,b,c,d)=>document.documentElement.getAttribute("data-theme")=="dark"?c+k*d:a+k*b;
+function snapshot(){
+ const ks=Object.keys(S.raw);if(!ks.length){alert("Belum ada harga untuk disimpan. Klik Harga Yahoo dulu.");return}
+ const data={};ks.forEach(t=>{const x=S.raw[t];data[t]={d:x.d,o:x.o,c:x.c}});
+ const a=document.createElement("a");a.href=URL.createObjectURL(new Blob([JSON.stringify({updated:new Date().toISOString(),source:S.src||"",data})],{type:"application/json"}));
+ a.download="kiyaaa-snapshot-"+new Date().toISOString().slice(0,10)+".json";document.body.appendChild(a);a.click();setTimeout(()=>{URL.revokeObjectURL(a.href);a.remove()},600)}
+// Muat ulang hanya simbol gagal / cache lama, satu per satu dengan jeda (lebih ramah limit proxy)
+async function yahooMissing(){
+ const todo=S.ds?[...S.ds.miss,...S.ds.cache]:[];
+ if(!todo.length){$("stt").textContent="● Tidak ada simbol gagal atau cache lama yang perlu dimuat ulang.";return}
+ const rng=$("rng").value;let got=0;
+ for(let i=0;i<todo.length;i++){const t=todo[i];$("stt").textContent=`● Memuat ulang ${t} (${i+1}/${todo.length})…`;
+  const r=await oneYahoo(t,rng,i+1);
+  if(r.ok){S.raw[t]=r.v;got++;S.ds.miss=S.ds.miss.filter(x=>x!=t);S.ds.cache=S.ds.cache.filter(x=>x!=t);S.ds.upd.push(t)}
+  await sleep(700)}
+ cacheSet({raw:S.raw,t:Date.now()});
+ S.src=`Yahoo Finance · ${got}/${todo.length} simbol berhasil dimuat ulang`;recompute()}
+function dataCard(){const d=S.ds,T=TK.length,ld=S.R.length?Math.max(...S.R.map(r=>r.lastD)):null,old=ld?S.R.filter(r=>ld-r.lastD>3).length:0,
+ u=d?d.upd.length:S.R.length,c=d?d.cache.length:0,m=d?d.miss.length:Math.max(0,T-S.R.length);
+ return`<div class="card idx ${m?"off":c||old?"":"on"}"><span class="big">🗂️</span><div><h2>Status Data</h2><div class="mu">Universe <b>${T}</b> · Diperbarui <b class="p">${u}</b> · Cache lama <b>${c}</b> · Tanpa data <b class="${m?"n":""}">${m}</b>${m&&d?` (${d.miss.slice(0,12).join(", ")}${d.miss.length>12?"…":""})`:""} · Data terakhir <b>${ld?dt(ld):"–"}</b>${old?` · <span class="n">⚠ ${old} saham tertinggal &gt;3 hari</span>`:""}${m?` · <span class="n">⚠ hasil belum lengkap, jangan dibaca dulu</span>`:""}</div></div></div>`}
+function dummy(){
+ let sd=42;const rnd=()=>(sd=(sd*1664525+1013904223)%4294967296)/4294967296,raw={},n=750,d0=Math.floor(Date.now()/864e5)-n*1.45|0;
+ TK.forEach(t=>{let p=200+rnd()*6000,d=[],o=[],c=[],v=0,day=d0;for(let i=0;i<n;i++){day++;while([0,6].includes(new Date(day*864e5).getUTCDay()))day++;
+  v=v*.15+(rnd()-.5)*.012;const nx=Math.max(50,p*(1+v+(rnd()-.495)*.03)),tk=tick(p);d.push(day);o.push(Math.round(p/tk)*tk);c.push(Math.round(nx/tick(nx))*tick(nx));p=nx}raw[t]={d,o,c}});
+ S.ds=null;S.raw=raw;S.src="Data Dummy (simulasi)";recompute()}
+function upload(file){const fr=new FileReader();fr.onload=()=>{try{const j=JSON.parse(fr.result),src=j.data||j,raw={};
+  Object.keys(src).forEach(t=>{const x=src[t];let d=x.d||x.ts;if(!d||!x.c)return;if(!x.d)d=d.map(v=>Math.floor(v>1e11?v/864e5:v/86400));raw[t.replace(".JK","")]={d,o:x.o||x.c,c:x.c}});
+  if(!Object.keys(raw).length)throw 0;S.ds=null;S.raw=raw;S.src="Upload JSON";recompute()}catch(e){alert("Format JSON tidak dikenali. Gunakan {TICKER:{d:[hari],o:[...],c:[...]}} atau {ts:[...]}.")}};fr.readAsText(file)}
+
+// ===== Render =====
+function cu(el,v,fm){const a=isFinite(el._v)?el._v:0;el._v=v;if(!isFinite(v)){el.textContent=fm(v);return}const t0=performance.now();(function s(t){const p=Math.min(1,(t-t0)/800),e=1-Math.pow(1-p,3);el.textContent=fm(a+(v-a)*e);if(p<1)requestAnimationFrame(s)})(t0)}
+const KI=["💵","🧮","⚖️","🏆","🩹","🎯","🌊","⏱️","⌛"];
+const KD=[["net","% Net Profit",v=>f(v)+"%",1],["avg","AVG PNL",v=>f(v)+"%",1],["pf","Profit Factor",v=>v===Infinity?"∞":f(v),3],["aw","AVG Win",v=>f(v)+"%",1],["al","AVG Loss",v=>f(v)+"%",1],["wr","Winning Rate",v=>f(v,1)+"%",0],["dd","Max % Drawdown",v=>f(v)+"%",2],["bw","AVG Win Bar Held",v=>f(v,1),0],["bl","AVG Loss Bar Held",v=>f(v,1),0]];
+// ===== Grafik dashboard (SVG murni, tanpa library) =====
+const GC={bl:"var(--c6)",gr:"var(--c35)",rd:"var(--c36)",mu:"var(--c5)",bd:"var(--c3)"};
+function chEquity(s){const P=s.pts;if(!P||P.length<2)return"";
+ const W=540,H=262,pl=44,pr=10,iw=W-pl-pr,e0=10,e1=150,d0y=186,d1y=244,x0=P[0].d,x1=P[P.length-1].d,sp=Math.max(1,x1-x0);
+ const ys=P.map(p=>(p.eq-1)*100),mn=Math.min(0,...ys),mx=Math.max(1,...ys),rg=mx-mn||1,dm=Math.max(1,...P.map(p=>p.dd));
+ const X=d=>pl+(d-x0)/sp*iw,Y=v=>e0+(mx-v)/rg*(e1-e0),YD=v=>d0y+v/dm*(d1y-d0y);
+ const ln="M"+P.map((p,i)=>X(p.d).toFixed(1)+" "+Y(ys[i]).toFixed(1)).join("L");
+ const dd="M"+X(x0).toFixed(1)+" "+d0y+"L"+P.map(p=>X(p.d).toFixed(1)+" "+YD(p.dd).toFixed(1)).join("L")+"L"+X(x1).toFixed(1)+" "+d0y+"Z";
+ const g=[0,1,2,3].map(i=>{const v=mx-i*rg/3,y=Y(v);return`<line x1="${pl}" x2="${W-pr}" y1="${y.toFixed(1)}" y2="${y.toFixed(1)}" stroke="${GC.bd}" stroke-dasharray="3 5"/><text x="${pl-6}" y="${(y+4).toFixed(1)}" text-anchor="end" fill="${GC.mu}" font-size="13">${f(v,0)}%</text>`}).join("");
+ return`<svg viewBox="0 0 ${W} ${H}" role="img" aria-label="Kurva ekuitas dan drawdown"><defs><linearGradient id="ge" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="${GC.bl}" stop-opacity=".28"/><stop offset="1" stop-color="${GC.bl}" stop-opacity="0"/></linearGradient></defs>${g}
+ <line x1="${pl}" x2="${W-pr}" y1="${Y(0).toFixed(1)}" y2="${Y(0).toFixed(1)}" stroke="${GC.mu}" stroke-width="1"/>
+ <path d="${ln}L${X(x1).toFixed(1)} ${Y(0).toFixed(1)}L${X(x0).toFixed(1)} ${Y(0).toFixed(1)}Z" fill="url(#ge)"/><path class="ln" pathLength="1" d="${ln}" fill="none" stroke="${GC.bl}" stroke-width="2.4" stroke-linejoin="round"/>
+ <text x="${pl}" y="170" fill="${GC.mu}" font-size="13">Drawdown (maks ${f(dm)}%)</text><path d="${dd}" fill="${GC.rd}" opacity=".35"/><line x1="${pl}" x2="${W-pr}" y1="${d0y}" y2="${d0y}" stroke="${GC.bd}"/>
+ <text x="${pl}" y="${H-4}" fill="${GC.mu}" font-size="13">${dt(x0)}</text><text x="${W-pr}" y="${H-4}" text-anchor="end" fill="${GC.mu}" font-size="13">${dt(x1)}</text></svg>`}
+function chMonthly(MO){const B=MO.slice(-24);if(B.length<2)return"";
+ const W=540,H=210,pl=10,pr=10,iw=W-pl-pr,Z=96,mA=Math.max(1,...B.map(m=>Math.abs(m.ret))),bw=iw/B.length;
+ const bars=B.map((m,i)=>{const h=m.ret/mA*(Z-14),x=pl+i*bw+bw*.16,w=bw*.68,y=h>=0?Z-h:Z;
+  return`<rect x="${x.toFixed(1)}" y="${y.toFixed(1)}" width="${w.toFixed(1)}" height="${Math.max(1.5,Math.abs(h)).toFixed(1)}" rx="3" fill="${m.ret>=0?GC.gr:GC.rd}" opacity="${m.n?.95:.3}"><title>${MF(m)}: ${sp(m.ret)}</title></rect>`}).join("");
+ const lab=B.map((m,i)=>m.m%3==0?`<text x="${(pl+i*bw+bw/2).toFixed(1)}" y="${H-6}" text-anchor="middle" fill="${GC.mu}" font-size="12">${MN[m.m]} ${String(m.y).slice(2)}</text>`:"").join("");
+ return`<svg viewBox="0 0 ${W} ${H}" role="img" aria-label="Return bulanan"><line x1="${pl}" x2="${W-pr}" y1="${Z}" y2="${Z}" stroke="${GC.mu}"/><text x="${pl}" y="12" fill="${GC.mu}" font-size="13">+${f(mA,1)}%</text><text x="${pl}" y="${2*Z-2}" fill="${GC.mu}" font-size="13">-${f(mA,1)}%</text>${bars}${lab}</svg>`}
+function chHist(tr){if(tr.length<3)return"";
+ const v=tr.map(x=>x.pnl),lo=Math.min(...v),hi=Math.max(...v),bw=Math.max(1,Math.ceil((hi-lo)/16)),b0=Math.floor(lo/bw)*bw,nb=Math.max(2,Math.ceil((hi-b0)/bw)+(hi%bw==0?1:0)),C=new Array(nb).fill(0);
+ v.forEach(x=>{C[Math.min(nb-1,Math.floor((x-b0)/bw))]++});
+ const W=540,H=210,pl=10,pr=10,iw=W-pl-pr,bt=170,mC=Math.max(...C),w=iw/nb,Xz=pl+(0-b0)/bw*w;
+ const bars=C.map((c,i)=>{const h=c/mC*(bt-22),lo2=b0+i*bw;return`<rect x="${(pl+i*w+1).toFixed(1)}" y="${(bt-h).toFixed(1)}" width="${(w-2).toFixed(1)}" height="${Math.max(c?1.5:0,h).toFixed(1)}" rx="3" fill="${lo2>=0?GC.gr:GC.rd}" opacity=".9"><title>${lo2}% s/d ${lo2+bw}%: ${c} trade</title></rect>`}).join("");
+ return`<svg viewBox="0 0 ${W} ${H}" role="img" aria-label="Distribusi hasil trade">${bars}<line x1="${Xz.toFixed(1)}" x2="${Xz.toFixed(1)}" y1="14" y2="${bt}" stroke="${GC.mu}" stroke-dasharray="4 4"/><line x1="${pl}" x2="${W-pr}" y1="${bt}" y2="${bt}" stroke="${GC.bd}"/>
+ <text x="${pl}" y="${H-12}" fill="${GC.mu}" font-size="13">${b0}%</text><text x="${Xz.toFixed(1)}" y="${H-12}" text-anchor="middle" fill="${GC.mu}" font-size="13">0%</text><text x="${W-pr}" y="${H-12}" text-anchor="end" fill="${GC.mu}" font-size="13">${b0+nb*bw}%</text><text x="${W-pr}" y="12" text-anchor="end" fill="${GC.mu}" font-size="13">tertinggi ${mC} trade/kolom</text></svg>`}
+function chTop(R){const a=R.filter(r=>r.tr.length&&r.stats.net!=null).slice().sort((x,y)=>y.stats.net-x.stats.net);if(a.length<2)return"";
+ const pick=a.length>8?[...a.slice(0,4),...a.slice(-4)]:a,mA=Math.max(1,...pick.map(r=>Math.abs(r.stats.net)));
+ return`<div class="hb">${pick.map(r=>{const v=r.stats.net,w=Math.max(3,Math.abs(v)/mA*100);return`<div><b style="text-align:left">${r.t}</b><span style="display:block;background:var(--p2);border-radius:6px"><em style="width:${w.toFixed(0)}%;background:${v>=0?GC.gr:GC.rd}"></em></span><b class="${cl(v)}">${v>0?"+":""}${f(v,1)}%</b></div>`}).join("")}</div>`}
+function charts(s,MO){const TR=S.R.flatMap(r=>r.tr);if(!TR.length)return"";
+ return`<div class="cg"><div class="card"><h2><i>📈</i>Kurva Ekuitas & Drawdown</h2><p class="sub">Pertumbuhan modal (garis biru) dan penurunan dari puncak (area merah).</p>${chEquity(s)}</div>
+ <div class="card"><h2><i>📅</i>Return Bulanan</h2><p class="sub">24 bulan terakhir, <span class="p">hijau</span> untung dan <span class="n">merah</span> rugi.</p>${chMonthly(MO)}</div>
+ <div class="card"><h2><i>📊</i>Sebaran Hasil Trade</h2><p class="sub"><span class="pill">Win rate ${s.wr==null?"–":f(s.wr,1)+"%"}</span><span class="pill">${s.n} trade</span> Jumlah trade per rentang untung/rugi.</p>${chHist(TR)}</div>
+ <div class="card"><h2><i>🏅</i>Saham Terbaik & Terburuk</h2><p class="sub">% net profit per saham (4 teratas dan 4 terbawah).</p>${chTop(S.R)}</div></div>`}
+const rows=(a,fn)=>a.map((x,i)=>`<tr style="--i:${Math.min(i,25)}">${fn(x,i)}</tr>`).join("");
+function watch(){return S.R.filter(r=>r.buyTrig&&r.buyTrig.dist<=6).sort((a,b)=>a.buyTrig.dist-b.buyTrig.dist)}
+function searchTickers(){
+ const q=(S.q||"").trim().toUpperCase();
+ let a=q?S.R.filter(r=>r.t.includes(q)):S.R.slice();
+ if(S.cf=="sinyal")a=a.filter(r=>r.sigs.length);else if(S.cf=="posisi")a=a.filter(r=>r.act);
+ return a.sort((x,y)=>x.t<y.t?-1:1)}
+// Chart harga + marker segitiga BUY/SELL, mengikuti ~150 bar terakhir agar tetap terbaca.
+function priceChart(r){
+ const NB=150,n=r.d.length,from=Math.max(0,n-NB);
+ const c=r.c.slice(from),sig=r.sig.slice(from),W=760,H=260;
+ const mn0=Math.min(...c),mx0=Math.max(...c),pad=(mx0-mn0||mx0*.05||1)*.1,mn=mn0-pad,mx=mx0+pad;
+ const X=i=>c.length>1?i/(c.length-1)*W:W/2,Y=v=>H-20-(v-mn)/((mx-mn)||1)*(H-40);
+ const ln="M"+c.map((v,i)=>X(i).toFixed(1)+" "+Y(v).toFixed(1)).join("L");
+ const marks=sig.map((s,i)=>{if(!s)return"";const x=X(i).toFixed(1),y=Y(c[i]);
+  return s>0?`<path d="M${x} ${(y+18).toFixed(1)} L${(x-6)} ${(y+28).toFixed(1)} L${(+x+6)} ${(y+28).toFixed(1)}Z" fill="var(--c35)"/>`
+            :`<path d="M${x} ${(y-18).toFixed(1)} L${(x-6)} ${(y-28).toFixed(1)} L${(+x+6)} ${(y-28).toFixed(1)}Z" fill="var(--c36)"/>`}).join("");
+ return `<svg viewBox="0 0 ${W} ${H}"><defs><linearGradient id="pg" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="var(--c6)" stop-opacity=".32"/><stop offset="1" stop-color="var(--c6)" stop-opacity="0"/></linearGradient></defs>
+ ${[0,1,2,3].map(i=>`<line x1="0" x2="${W}" y1="${(20+i*(H-40)/3).toFixed(1)}" y2="${(20+i*(H-40)/3).toFixed(1)}" stroke="var(--c3)" stroke-dasharray="3 5"/>`).join("")}
+ <path d="${ln}L${W} ${H}L0 ${H}Z" fill="url(#pg)"/><path class="ln" pathLength="1" d="${ln}" fill="none" stroke="var(--c6)" stroke-width="2.2"/>
+ ${marks}
+ <text x="4" y="14" fill="var(--c5)" font-size="12">${f(mx0,0)}</text><text x="4" y="${H-6}" fill="var(--c5)" font-size="12">${f(mn0,0)}</text></svg>
+ <p class="mu" style="margin:6px 2px 0;font-size:11px">Menampilkan ${c.length} bar terakhir · ▲ hijau = sinyal BUY · ▼ merah = sinyal SELL</p>`}
+// ===== Ticker berjalan + panel Saham Terpilih =====
+function mq(){
+ const e=$("mq");e.innerHTML=S.R.map(r=>`<span class="it${r.t==S.sel?" on":""}" data-t="${r.t}"><b>${r.t}</b>${f(r.last,0)} <span class="${cl(r.chg)}">${r.chg==null?"":(r.chg>=0?"▲ ":"▼ ")+f(Math.abs(r.chg))+"%"}</span></span>`).join("");
+ e.style.setProperty("--dur",Math.max(40,S.R.length*1.6)+"s")}
+function pickSel(v){v=String(v).trim().toUpperCase().replace(".JK","");const i=$("ssel");if(i&&i.blur)i.blur();
+ if(S.R.find(x=>x.t==v))S.sel=v;if(S.v=="cari")draw();else renderSel()}
+function renderSel(){
+ const b=$("selbar"),r=S.R.find(x=>x.t==S.sel);
+ document.querySelectorAll("#mq .it").forEach(x=>x.classList.toggle("on",x.dataset.t==S.sel));
+ if(!r){b.style.display="none";return}
+ if(document.activeElement&&document.activeElement.id=="ssel")return;
+ b.style.display="";if($("tkl").dataset.n!=S.R.length){$("tkl").innerHTML=S.R.map(x=>`<option value="${x.t}">`).join("");$("tkl").dataset.n=S.R.length}
+ const s=r.stats,a=r.act;
+ const pos=a?(a.pend?"Sinyal BUY baru, eksekusi di open bar berikutnya":`Posisi aktif: masuk ${f(a.ep,0)} · Floating ${pc(a.pnl)} · ${a.bars} bar`):"Tidak ada posisi terbuka";
+ const trg=r.buyTrig?` · Pemicu BUY ≥ <b>${f(r.buyTrig.p,0)}</b> (<span class="p">+${f(r.buyTrig.dist)}%</span>)`:r.sellTrig?` · Pemicu SELL ≤ <b>${f(r.sellTrig.p,0)}</b> (<span class="n">-${f(r.sellTrig.dist)}%</span>)`:"";
+ const m=KD.map(k=>{const v=s[k[0]],c=v==null?"":k[3]==1?cl(v):k[3]==2?"n":k[3]==3?(v>=1?"p":"n"):"";
+  return`<div class="sm"><span>${k[1]}</span><b class="${c}">${v==null?"–":(k[0]=="net"&&v>0?"+":"")+k[2](v)}</b></div>`}).join("")+`<div class="sm"><span>Total Trade</span><b>${s.n}</b></div>`;
+ b.innerHTML=`<div class="sh"><span class="mu">Saham terpilih</span><input id="ssel" list="tkl" value="${r.t}" onchange="pickSel(this.value)" onfocus="this.select()" autocomplete="off">
+  <span class="px">${f(r.last,0)}</span><span class="${cl(r.chg)}">${r.chg==null?"–":(r.chg>=0?"▲ ":"▼ ")+f(Math.abs(r.chg))+"%"}</span><span class="tg ${r.st}">${r.st}</span><span class="mu">RSI ${f(r.rsi,1)}</span><span class="sp"></span>
+  <button onclick="S.v='cari';draw()">📈 Grafik</button><button onclick="S.fl='${r.t}';S.v='hist';draw()">🕘 Riwayat</button></div>
+ <div class="note" style="margin:0">${pos}${trg}</div><div class="sms">${m}</div>`}
+function draw(){
+ renderSel();
+ document.querySelectorAll("nav a").forEach(a=>a.classList.toggle("on",a.dataset.v==S.v));
+ const V=$("view");if(!S.R.length){V.innerHTML='<div class="card mu">Klik <b>Harga Yahoo</b> atau <b>Data Dummy</b> untuk memulai.</div>';return}
+ const s=port(),wt=watch(),opn=S.R.filter(r=>r.act),sg=S.R.flatMap(r=>r.sigs),MO=s.mo||[],lm=MO.length?MO[MO.length-1]:null,bh=MO.length?MO.reduce((a,m)=>m.nh>a.nh?m:a,MO[0]):null,lr=MO.slice().reverse().find(m=>m.nh>0)||null,NHn=MO.filter(m=>m.nh>0).length,NHp=MO.length?NHn/MO.length*100:null;
+ if(S.v=="dash"){
+  const wl=S.pf=="hot"?wt.filter(r=>r.buyTrig.dist<=3):wt;
+  V.innerHTML=dataCard()+`<div class="g4">
+  <div class="k" style="--i:0"><i class="ic">💰</i><span>Cumulative Return</span><b id="c0" class="${cl(s.net)}">–</b><small>Agregat semua trade tertutup</small></div>
+  <div class="k" style="--i:1"><i class="ic">💼</i><span>Open Positions</span><b>${opn.length}</b><small>Posisi aktif saat ini</small></div>
+  <div class="k" style="--i:2"><i class="ic">⚡</i><span>Sinyal (7 bar terakhir)</span><b>${sg.length}</b><small>BUY/SELL terbaru</small></div>
+  <div class="k" style="--i:3" ><i class="ic">🎯</i><span>Pantauan Hari Ini</span><b>${wt.length}</b><small>Kandidat mendekati sinyal BUY</small></div></div>
+  <div class="g4">
+  <div class="k" style="--i:4"><i class="ic">📈</i><span>CAGR (per tahun)</span><b id="cg">–</b><small>Pertumbuhan majemuk tahunan</small></div>
+  <div class="k" style="--i:5"><i class="ic">🛟</i><span>CAGR ÷ Max Drawdown</span><b>${s.calmar==null?"–":f(s.calmar)}</b><small>Makin tinggi, makin efisien terhadap risiko</small></div>
+  <div class="k" style="--i:6"><i class="ic">⏳</i><span>Lama Periode Trade</span><b>${s.yrs?f(s.yrs,1)+" thn":"–"}</b><small>Trade pertama sampai terakhir</small></div>
+  <div class="k" style="--i:7"><i class="ic">💵</i><span>Ekuitas (modal Rp100 jt)</span><b>${s.eqEnd&&s.n?"Rp"+f(s.eqEnd*100,1)+" jt":"–"}</b><small>Tiap trade = 1/N modal awal</small></div></div>
+  <div class="g4">
+  <div class="k" style="--i:8"><i class="ic">✅</i><span>% Profitable Stock</span><b class="${s.psPct==null?"":s.psPct>=50?"p":"n"}">${s.psPct==null?"–":f(s.psPct,1)+"%"}</b><small>${s.psTot?s.psN+" dari "+s.psTot+" saham net profit":"Belum ada trade tertutup"}</small></div>
+  <div class="k" style="--i:9"><i class="ic">🏔️</i><span>% Highest Equity · Frekuensi Bulanan</span><b class="${NHp!=null&&NHp>=50?"p":""}">${NHp==null?"–":f(NHp,1)+"%"}</b><small>${!lm?"Belum ada trade tertutup":NHn+" dari "+MO.length+" bulan mencetak equity tertinggi baru"+(NHn?" · rata-rata tiap "+f(MO.length/NHn,1)+" bulan sekali":"")+". Bulan ini ("+MF(lm)+"): "+(lm.nh>0?"rekor baru +"+f(lm.nh)+"%":"belum rekor, ekuitas "+(s.fromPeak>.005?"-"+f(s.fromPeak)+"% dari puncak":"di puncak"))}</small></div>
+  <div class="k" style="--i:10"><i class="ic">📉</i><span>Ekuitas vs Puncak</span><b class="${s.fromPeak!=null&&s.fromPeak>.005?"n":"p"}">${s.fromPeak==null?"–":s.fromPeak<.005?"Di puncak":"-"+f(s.fromPeak)+"%"}</b><small>Jarak ekuitas saat ini ke puncak tertinggi</small></div></div>
+  <div class="g9" id="g9">${KD.map((k,i)=>`<div class="k" style="--i:${i+11}"><i class="ic">${KI[i]}</i><span>${k[1]}</span><b id="k_${k[0]}">–</b></div>`).join("")}<div class="k" style="--i:20"><i class="ic">🧾</i><span>Total Trade</span><b>${s.n}</b></div></div>
+  ${charts(s,MO)}<div class="card"><div class="hdr"><div><h2>🎯 Pantauan Hari Ini — Kandidat Sinyal Beli</h2><p class="sub">Saham belum berposisi dengan RSI di bawah level; <b>harga pemicu</b> = estimasi harga penutupan besok agar RSI menembus level ke atas (dibulatkan fraksi BEI, bukan nasihat investasi).</p></div>
+  <div class="chips"><button class="chip ${S.pf=="all"?"on":""}" data-pf="all">Semua</button><button class="chip ${S.pf=="hot"?"on":""}" data-pf="hot">🔥 Sangat Dekat</button></div></div>
+  <div class="w"><table><thead><tr><th>Saham</th><th>Harga Sekarang</th><th>Harga Pemicu Beli</th><th>Jarak ke Target</th><th>RSI</th><th>Momentum</th><th>Prioritas</th></tr></thead><tbody>${rows(wl,r=>`<td><b>${r.t}.JK</b></td><td>${f(r.last,0)}</td><td><b>${f(r.buyTrig.p,0)}</b></td><td class="p">+${f(r.buyTrig.dist)}%</td><td>${f(r.rsi,1)}</td><td>${r.up?"Naik ↑":"Turun ↓"}</td><td><span class="tg ${r.buyTrig.dist<=3?"hot":"near"}">${r.buyTrig.dist<=3?"🔥 Sangat Dekat":"👀 Dekat"}</span></td>`)||'<tr><td colspan=7>Tidak ada kandidat</td></tr>'}</tbody></table></div></div>`;
+  cu($("c0"),s.net,v=>(v>=0?"+":"")+f(v)+"%");cu($("cg"),s.cagr,v=>(v>=0?"+":"")+f(v)+"%");$("cg").className=s.cagr==null?"":s.cagr>=0?"p":"n";
+  KD.forEach(k=>{const e=$("k_"+k[0]),v=s[k[0]];cu(e,v,k[2]);e.className=k[3]==1?cl(v):k[3]==2?"n":k[3]==3?(v>=1?"p":"n"):""})}
+ else if(S.v=="cari"){
+  if(!S.sel||!S.R.find(x=>x.t==S.sel)){const first=S.R.find(x=>x.act)||S.R[0];S.sel=first?first.t:""}
+  const list=searchTickers(),r=S.R.find(x=>x.t==S.sel);
+  V.innerHTML=`<div class="two">
+  <div class="card"><input id="sq" placeholder="Cari kode saham…" value="${S.q||""}" autocomplete="off">
+  <div class="chips" style="margin-top:10px"><button class="chip ${S.cf=="semua"?"on":""}" data-cf="semua">Semua</button><button class="chip ${S.cf=="sinyal"?"on":""}" data-cf="sinyal">Sinyal</button><button class="chip ${S.cf=="posisi"?"on":""}" data-cf="posisi">Posisi</button></div>
+  <div class="slist">${list.map((x,i)=>`<div class="srow ${x.t==S.sel?"on":""}" style="--i:${Math.min(i,30)}" data-t="${x.t}"><div><b>${x.t}</b><small>RSI ${f(x.rsi,1)}</small></div><div class="pr"><b>${f(x.last,0)}</b><br><span class="tg ${x.st}">${x.st}</span></div></div>`).join("")||'<div class="mu" style="padding:10px">Tidak ada hasil</div>'}</div></div>
+  <div class="card">${r?`<div class="dhdr"><span class="px">${r.t}.JK ${f(r.last,0)}</span><span class="${cl(r.chg)}">${r.chg==null?"–":(r.chg>=0?"▲ ":"▼ ")+f(Math.abs(r.chg))+"%"}</span><span class="tg ${r.st}">${r.st}</span><span class="mu">RSI ${f(r.rsi,1)}</span></div>
+  <p class="sub">${r.act?(r.act.pend?"Sinyal BUY baru, eksekusi di open bar berikutnya":`Posisi: masuk ${f(r.act.ep,0)} · Floating ${pc(r.act.pnl)} · ${r.act.bars} bar`):"Tidak ada posisi terbuka pada saham ini"}</p>
+  ${priceChart(r)}
+  <h2 style="margin:14px 0 4px">Trade ${r.t} (${r.tr.length})</h2><div class="w" style="max-height:280px"><table><thead><tr><th>Tgl Buy</th><th>Harga Buy</th><th>Tgl Sell</th><th>Harga Sell</th><th>PNL</th><th>Bar Held</th></tr></thead><tbody>${rows(r.tr.slice().reverse().slice(0,40),x=>`<td>${dt(x.inD)}</td><td>${f(x.ep,0)}</td><td>${dt(x.outD)}</td><td>${f(x.xp,0)}</td><td>${pc(x.pnl)}</td><td>${x.bars}</td>`)||'<tr><td colspan=6>Belum ada trade tertutup</td></tr>'}</tbody></table></div>`:'<div class="mu">Pilih saham di daftar sebelah kiri.</div>'}</div></div>`;
+  const sq=$("sq");if(sq){sq.focus();sq.selectionStart=sq.selectionEnd=sq.value.length}}
+ else if(S.v=="sig"){
+  const sgs=sg.sort((a,b)=>b.d-a.d||(a.t<b.t?-1:1));
+  V.innerHTML=`<div class="card"><h2>⚡ Sinyal Terbaru (7 bar terakhir)</h2><div class="w"><table><thead><tr><th>Saham</th><th>Sinyal</th><th>Tanggal</th><th>Close</th><th>RSI</th><th>Eksekusi</th></tr></thead><tbody>${rows(sgs,x=>`<td><b>${x.t}</b></td><td><span class="tg ${x.s>0?"BUY":"SELL"}">${x.s>0?"BUY":"SELL"}</span></td><td>${dt(x.d)}</td><td>${f(x.c,0)}</td><td>${f(x.r,1)}</td><td>${x.today?"Open bar berikutnya":"Sudah dieksekusi"}</td>`)||'<tr><td colspan=6>Tidak ada sinyal</td></tr>'}</tbody></table></div></div>
+  <div class="card"><h2>📌 Posisi Aktif (${opn.length})</h2><p class="sub">Harga stop-sell = estimasi penutupan yang membuat RSI menembus level ke bawah (fraksi BEI).</p><div class="w"><table><thead><tr><th>Saham</th><th>Tgl Masuk</th><th>Harga Masuk</th><th>Last</th><th>Floating</th><th>Bar Held</th><th>RSI</th><th>Harga Pemicu Sell</th><th>Jarak</th></tr></thead><tbody>${rows(opn.sort((a,b)=>(b.act.pnl??-1e9)-(a.act.pnl??-1e9)),r=>{const a=r.act;return`<td><b>${r.t}</b></td><td>${a.pend?"Besok":dt(a.inD)}</td><td>${a.pend?"–":f(a.ep,0)}</td><td>${f(a.last,0)}</td><td>${a.pend?"–":pc(a.pnl)}</td><td>${a.bars}</td><td>${f(r.rsi,1)}</td><td>${r.sellTrig?f(r.sellTrig.p,0):"–"}</td><td>${r.sellTrig?'<span class="n">-'+f(r.sellTrig.dist)+"%</span>":"–"}</td>`})||'<tr><td colspan=9>Tidak ada posisi aktif</td></tr>'}</tbody></table></div></div>`}
+ else if(S.v=="hist"){
+  let tr=S.R.flatMap(r=>r.tr).sort((a,b)=>b.outD-a.outD);if(S.fl)tr=tr.filter(x=>x.t==S.fl);
+  V.innerHTML=`<div class="card"><div class="hdr"><h2>🕘 Riwayat Trade (${tr.length})</h2><label class="mu">Saham <select id="hf"><option value="">Semua</option>${S.R.map(r=>`<option ${r.t==S.fl?"selected":""}>${r.t}</option>`).join("")}</select></label></div>
+  <div class="w" style="max-height:600px"><table><thead><tr><th>Saham</th><th>Tgl Buy</th><th>Harga Buy</th><th>Tgl Sell</th><th>Harga Sell</th><th>PNL</th><th>Bar Held</th></tr></thead><tbody>${rows(tr.slice(0,600),x=>`<td><b>${x.t}</b></td><td>${dt(x.inD)}</td><td>${f(x.ep,0)}</td><td>${dt(x.outD)}</td><td>${f(x.xp,0)}</td><td>${pc(x.pnl)}</td><td>${x.bars}</td>`)}</tbody></table></div></div>`;
+  $("hf").onchange=e=>{S.fl=e.target.value;draw()}}
+ else if(S.v=="map"){
+  const C=[["t","Saham"],["n","Trade"],["net","% Net"],["avg","AVG PNL"],["pf","PF"],["aw","AVG Win"],["al","AVG Loss"],["wr","Win %"],["dd","Max DD"],["bw","Bar Win"],["bl","Bar Loss"]];
+  const a=S.R.slice().sort((x,y)=>{const p=S.sk=="t"?x.t:x.stats[S.sk]??-1e9,q=S.sk=="t"?y.t:y.stats[S.sk]??-1e9;return(p>q?1:p<q?-1:0)*S.sd});
+  V.innerHTML=`<div class="card"><h2>🗺 Peta Performa (% net profit per saham)</h2><p class="sub">Klik kotak untuk melihat riwayat tradenya. <b class="${s.psPct>=50?"p":"n"}">${s.psN} dari ${s.psTot} saham profit (${s.psPct==null?"–":f(s.psPct,1)+"%"})</b>.</p><div class="hm">${a.map((r,i)=>{const v=r.stats.net,k=v==null?0:Math.min(1,Math.sqrt(Math.abs(v))/14);const bg=v==null?"var(--c2)":v>=0?`rgba(var(--gr-rgb),${ha(k,.12,.6,.14,.5)})`:`rgba(var(--rd-rgb),${ha(k,.12,.6,.14,.5)})`;
+   return`<div class="tile" data-t="${r.t}" style="--i:${Math.min(i,60)};background:${bg}"><b>${r.t}</b><small>${v==null?"–":(v>0?"+":"")+f(v,1)+"%"}</small></div>`}).join("")}</div></div>
+  <div class="card"><h2>Statistik per Saham</h2><div class="w"><table><thead><tr>${C.map(c=>`<th data-k="${c[0]}">${c[1]}${S.sk==c[0]?(S.sd>0?" ▲":" ▼"):""}</th>`).join("")}</tr></thead><tbody>${rows(a,r=>{const s=r.stats;return`<td><b>${r.t}</b></td><td>${s.n}</td><td>${pc(s.net)}</td><td>${pc(s.avg)}</td><td>${s.pf===Infinity?"∞":f(s.pf)}</td><td>${pc(s.aw)}</td><td>${pc(s.al)}</td><td>${f(s.wr,1)}</td><td>${f(s.dd)}</td><td>${f(s.bw,1)}</td><td>${f(s.bl,1)}</td>`})}</tbody></table></div></div>`}
+
+ else if(S.v=="bln"){
+  const YR=s.yr||[];if(!MO.length){V.innerHTML='<div class="card mu">Belum ada trade tertutup.</div>';return}
+  const dum=/Dummy/i.test(S.src||""),rets=MO.map(m=>m.ret),srt=rets.slice().sort((a,b)=>a-b),med=srt.length%2?srt[(srt.length-1)/2]:(srt[srt.length/2-1]+srt[srt.length/2])/2;
+  const avgM=rets.reduce((a,b)=>a+b,0)/rets.length,posM=MO.filter(m=>m.ret>0).length,bM=MO.reduce((a,m)=>m.ret>a.ret?m:a,MO[0]),wM=MO.reduce((a,m)=>m.ret<a.ret?m:a,MO[0]),nhN=MO.filter(m=>m.nh>0).length;
+  const sm=MO.find(m=>m.k==S.mo)||MO.slice().reverse().find(m=>m.n)||lm;
+  // bar chart (maks 60 bulan terakhir)
+  const BM=MO.slice(-60),W=900,H=230,mA=Math.max(1,...BM.map(m=>Math.abs(m.ret))),Z=H/2,bw=W/BM.length,Yb=v=>v/mA*(H/2-22);
+  const bars=BM.map((m,i)=>{const h=Yb(m.ret),x=i*bw+bw*.15,w=bw*.7,y=m.ret>=0?Z-h:Z;
+   return`<rect x="${x.toFixed(1)}" y="${y.toFixed(1)}" width="${w.toFixed(1)}" height="${Math.max(1,Math.abs(h)).toFixed(1)}" rx="2" fill="${m.ret>=0?"var(--c35)":"var(--c36)"}" opacity="${m.n?.9:.25}"><title>${MF(m)}: ${sp(m.ret)}${m.nh>0?" · rekor baru +"+f(m.nh)+"%":""}</title></rect>`+(m.nh>0?`<circle cx="${(x+w/2).toFixed(1)}" cy="${(Z-Math.max(0,h)-9).toFixed(1)}" r="4" fill="var(--c31)"/>`:"")}).join("");
+  const lab=BM.map((m,i)=>(BM.length<=24||m.m%3==0)?`<text x="${(i*bw+bw/2).toFixed(1)}" y="${H+14}" text-anchor="middle" fill="var(--c5)" font-size="11">${MN[m.m]} ${String(m.y).slice(2)}</text>`:"").join("");
+  const yrOpt=YR.map(y=>y.y),fm=S.yf?MO.filter(m=>m.y==S.yf):MO;
+  // heatmap
+  const hm=['<div class="hc hd"></div>'+MN.map(n=>`<div class="hc hd">${n}</div>`).join("")+'<div class="hc hd">Tahun</div>'].concat(YR.slice().reverse().map(y=>{
+   const cells=MN.map((_,mi)=>{const m=MO.find(z=>z.y==y.y&&z.m==mi);if(!m)return'<div class="hc em">·</div>';
+    const k=Math.min(1,Math.abs(m.ret)/8),bg=!m.n&&!m.ret?"var(--c30)":m.ret>=0?`rgba(var(--gr-rgb),${ha(k,.1,.65,.12,.55)})`:`rgba(var(--rd-rgb),${ha(k,.1,.65,.12,.55)})`;
+    return`<div class="hc ${m.k==sm.k?"sel":""}" data-mo="${m.k}" style="background:${bg}" title="${MF(m)} · ${m.n} trade">${m.n||m.ret?(m.ret>0?"+":"")+f(m.ret,1)+"%":"0"}${m.nh>0?' <span class="st">★</span>':""}</div>`}).join("");
+   return`<div class="hc yl">${y.y}</div>${cells}<div class="hc" style="background:${y.ret>=0?"rgba(var(--gr-rgb),.28)":"rgba(var(--rd-rgb),.28)"};font-weight:800">${sp(y.ret)}</div>`})).join("");
+  V.innerHTML=`<div class="card ${dum?"warn":""}"><h2>📅 Historis Keuntungan Bulanan &amp; Tahunan</h2><p class="sub" style="margin:0">${dum?'<b class="n">⚠ Sumber data masih Data Dummy (simulasi), bukan Yahoo Finance asli.</b> Klik <b>Harga Yahoo</b> agar historis ini dihitung dari data real. ':'Sumber: <b>'+(S.src||"–")+'</b>. '}Dihitung dari <b>${s.n}</b> trade tertutup strategi RSI ${$("per").value}/${$("lvl").value} pada <b>${s.psTot}</b> saham (range ${$("rng").value}), periode <b>${MF(MO[0])}</b> – <b>${MF(lm)}</b>. Modal Rp100 jt dibagi rata ke ${s.psTot} saham, profit direalisasikan pada tanggal SELL (data harian Yahoo, eksekusi di open bar berikutnya). Untuk periode lebih panjang, ubah <b>Range</b> ke 5y/10y/Maks.</p></div>
+  <div class="g4">
+  <div class="k" style="--i:0"><i class="ic">🗓️</i><span>Bulan Positif</span><b class="${posM/MO.length>=.5?"p":"n"}">${posM}/${MO.length}</b><small>${f(posM/MO.length*100,1)}% bulan menghasilkan profit</small></div>
+  <div class="k" style="--i:1"><i class="ic">📊</i><span>Rata-rata / Median Bulanan</span><b class="${cl(avgM)}">${sp(avgM)}</b><small>Median ${sp(med)}</small></div>
+  <div class="k" style="--i:2"><i class="ic">🥇</i><span>Bulan Terbaik / Terburuk</span><b><span class="p">${sp(bM.ret)}</span> <span class="mu">/</span> <span class="n">${sp(wM.ret)}</span></b><small>${MF(bM)} · ${MF(wM)}</small></div>
+  <div class="k" style="--i:3"><i class="ic">🏔️</i><span>% Highest Equity (Frekuensi)</span><b class="${NHp>=50?"p":""}">${f(NHp,1)}%</b><small>${nhN} dari ${MO.length} bulan cetak rekor · tiap ~${f(MO.length/nhN,1)} bulan · rekor terbesar ${bh&&bh.nh>0?"+"+f(bh.nh)+"% ("+MF(bh)+")":"–"}</small></div></div>
+  <div class="card"><h2>🗓 Rekap Tahunan</h2><div class="w" style="max-height:none"><table><thead><tr><th>Tahun</th><th>Return</th><th>Profit (modal 100 jt)</th><th>Equity Akhir</th><th>Trade</th><th>Win %</th><th>AVG PNL/Trade</th><th>Bln +/−</th><th>Bln Terbaik</th><th>Bln Terburuk</th><th>Max DD Tahun</th><th>Frekuensi Rekor Equity</th></tr></thead><tbody>${rows(YR.slice().reverse(),y=>`<td><b>${y.y}</b>${y.mths<12?` <small class="mu">(${y.mths} bln)</small>`:""}</td><td>${pc(y.ret)}</td><td>${rp(y.profit)}</td><td>Rp${f(y.e1*100,1)} jt</td><td>${y.n}</td><td>${f(y.wr,1)}</td><td>${pc(y.avg)}</td><td>${y.pos}/${y.neg}</td><td>${MN[y.bm.m]} <span class="${cl(y.bm.ret)}">${sp(y.bm.ret)}</span></td><td>${MN[y.wm.m]} <span class="${cl(y.wm.ret)}">${sp(y.wm.ret)}</span></td><td class="n">${f(y.dd)}%</td><td>${y.nhN}/${y.mths} bln <b class="${y.nhN?"p":"mu"}">(${f(y.nhN/y.mths*100,0)}%)</b>${y.nhY>0?" · puncak +"+f(y.nhY)+"%":""}</td>`)}</tbody></table></div>
+  <h2 style="margin:16px 0 8px">Penjabaran per Tahun</h2><ul class="nar">${YR.slice().reverse().map(y=>{const tp=y.stk.filter(q=>q.contrib>0).slice(0,3),bt=y.stk.slice().reverse().filter(q=>q.contrib<0).slice(0,3);
+   return`<li><b class="yy">${y.y}</b> ${y.ret>=0?"Naik":"Turun"} <b class="${cl(y.ret)}">${f(Math.abs(y.ret))}%</b> (${rp(y.profit)}) lewat ${y.n} trade dengan win rate ${f(y.wr,1)}%. ${y.pos} dari ${y.act||y.mths} bulan aktif ditutup positif; bulan terbaik <b>${MF(y.bm)}</b> (${sp(y.bm.ret)}), terburuk <b>${MF(y.wm)}</b> (${sp(y.wm.ret)}). ${y.nhN?`Ekuitas mencetak rekor baru di <b>${y.nhN}</b> bulan, kenaikan terbesar melewati puncak lama <b class="p">+${f(y.nhB.nh)}%</b> pada ${MF(y.nhB)}.`:"Tidak ada bulan yang menembus puncak ekuitas sebelumnya."} Drawdown terdalam dalam tahun ini ${f(y.dd)}%.${tp.length?` Penyumbang terbesar: ${tp.map(q=>`<b>${q.t}</b> (+${f(q.contrib)}%)`).join(", ")}.`:""}${bt.length?` Penekan terbesar: ${bt.map(q=>`<b>${q.t}</b> (${f(q.contrib)}%)`).join(", ")}.`:""}</li>`}).join("")}</ul></div>
+  <div class="card"><h2>🔥 Heatmap Return Bulanan</h2><p class="sub">Klik bulan untuk melihat rincian trade &amp; kontribusi saham. <span class="st" style="color:var(--c31)">★</span> = bulan yang menembus puncak equity (Highest Equity) sebelumnya.</p><div class="hmw"><div class="hmg">${hm}</div></div></div>
+  <div class="card"><h2>📊 Return Bulanan${MO.length>60?" (60 bulan terakhir)":""}</h2><p class="sub">Batang = return bulan · <span style="color:var(--c31)">●</span> = menembus puncak equity lama</p><svg viewBox="0 0 ${W} ${H+20}"><line x1="0" x2="${W}" y1="${Z}" y2="${Z}" stroke="var(--c3)"/>${bars}${lab}<text x="4" y="12" fill="var(--c5)" font-size="11">+${f(mA,1)}%</text><text x="4" y="${H-4}" fill="var(--c5)" font-size="11">-${f(mA,1)}%</text></svg></div>
+  <div class="card"><div class="hdr"><div><h2>📆 Rincian Bulanan &amp; Highest Equity per Bulan</h2><p class="sub" style="margin:0"><b>% Naik di atas Puncak Lama</b> = persentase ekuitas tertinggi bulan tsb melampaui puncak ekuitas sebelum bulan itu (0 = tidak ada rekor baru). <b>Frekuensi Rekor</b> = persentase bulan yang mencetak equity tertinggi baru; mis. 50% berarti rata-rata equity baru tercapai tiap 2 bulan.</p></div>
+  <div class="chips"><button class="chip ${S.yf==""?"on":""}" data-yf="">Semua</button>${yrOpt.slice().reverse().map(y=>`<button class="chip ${S.yf==y?"on":""}" data-yf="${y}">${y}</button>`).join("")}</div></div>
+  <div class="w" style="max-height:480px"><table><thead><tr><th>Bulan</th><th>Equity Awal</th><th>Equity Akhir</th><th>Return Bulan</th><th>Profit (Rp)</th><th>Trade</th><th>W/L</th><th>Win %</th><th>High Equity Bulan</th><th>Naik vs Awal Bulan</th><th>Puncak Lama</th><th>% Naik di atas Puncak Lama</th><th>Frekuensi Rekor (kumulatif)</th><th>Max DD Bln</th></tr></thead><tbody>${fm.slice().reverse().map((m,i)=>`<tr data-mo="${m.k}" class="${m.k==sm.k?"sel":""}" style="--i:${Math.min(i,25)}"><td>${MF(m)}</td><td>${f(m.e0*100,1)}</td><td>${f(m.e1*100,1)}</td><td>${pc(m.ret)}</td><td>${rp(m.profit)}</td><td>${m.n}</td><td>${m.w}/${m.l}</td><td>${m.wr==null?"–":f(m.wr,1)}</td><td>${f(m.hi*100,1)} <small class="mu">(${sp(m.hiPct)})</small></td><td class="${cl(m.hiG)}">${m.hiG>0?"+":""}${f(m.hiG)}%</td><td>${f(m.pk0*100,1)}</td><td>${m.nh>0?'<span class="tg hot">★ +'+f(m.nh)+"%</span>":'<span class="mu">0,00%</span>'}</td><td>${f(m.nhP,0)}% <small class="mu">(${m.nhC}/${m.k-MO[0].k+1} bln)</small></td><td class="${m.dd>0?"n":"mu"}">${f(m.dd)}%</td>`).join("")}</tbody></table></div><p class="mu" style="font-size:11px;margin:6px 2px 0">Angka Equity dalam Rp juta (modal awal Rp100 jt); persen di kurung = High Equity bulan terhadap modal awal.</p></div>
+  <div class="card"><h2>🔎 Breakdown ${MF(sm)}</h2><p class="sub">Return <b class="${cl(sm.ret)}">${sp(sm.ret)}</b> (${rp(sm.profit)}) · ${sm.n} trade (${sm.w} win / ${sm.l} loss) · High Equity bulan ${sp(sm.hiPct)} dari modal awal · ${sm.nh>0?`<b class="p">menembus puncak lama +${f(sm.nh)}%</b>`:"tidak menembus puncak lama"}${sm.best?` · Terbaik <b>${sm.best.t}</b> ${sp(sm.best.pnl)} · Terburuk <b>${sm.worst.t}</b> ${sp(sm.worst.pnl)}`:""}</p>
+  ${sm.n?`<div class="two" style="grid-template-columns:minmax(260px,340px) 1fr"><div class="w" style="max-height:340px"><table><thead><tr><th>Saham</th><th>Trade</th><th>Kontribusi ke Portofolio</th></tr></thead><tbody>${rows(sm.stk,q=>`<td><b>${q.t}</b></td><td>${q.n} <small class="mu">(${q.w}W)</small></td><td>${pc(q.contrib)}</td>`)}</tbody></table></div>
+  <div class="w" style="max-height:340px"><table><thead><tr><th>Saham</th><th>Tgl Buy</th><th>Harga Buy</th><th>Tgl Sell</th><th>Harga Sell</th><th>PNL</th><th>Bar Held</th></tr></thead><tbody>${rows(sm.tr,x=>`<td><b>${x.t}</b></td><td>${dt(x.inD)}</td><td>${f(x.ep,0)}</td><td>${dt(x.outD)}</td><td>${f(x.xp,0)}</td><td>${pc(x.pnl)}</td><td>${x.bars}</td>`)}</tbody></table></div></div>`:'<div class="mu">Tidak ada trade yang ditutup pada bulan ini; ekuitas datar.</div>'}</div>`} else{
+  const P=s.pts;if(!P.length){V.innerHTML='<div class="card mu">Belum ada trade tertutup.</div>';return}
+  const W=900,H=300,x0=P[0].d,x1=P[P.length-1].d||x0+1,mn=Math.min(1,...P.map(p=>p.eq)),mx=Math.max(...P.map(p=>p.eq)),X=d=>(d-x0)/(x1-x0||1)*W,Y=v=>H-24-(v-mn)/(mx-mn||1)*(H-50),mdd=Math.max(...P.map(p=>p.dd),1);
+  const ln="M"+P.map(p=>X(p.d).toFixed(1)+" "+Y(p.eq).toFixed(1)).join("L"),dd="M0 340L"+P.map(p=>X(p.d).toFixed(1)+" "+(340+p.dd/mdd*55).toFixed(1)).join("L")+`L${W} 340Z`;
+  const pp=P.reduce((a,p)=>p.eq>a.eq?p:a,P[0]),px=X(pp.d),py=Y(pp.eq),pl=px>W-150?"end":"start";
+  V.innerHTML=`<div class="card"><h2>📈 Equity Curve Portofolio</h2><p class="sub">Modal dibagi rata ke ${S.R.filter(r=>r.tr.length).length} saham · ${s.n} trade · ${dt(x0)} → ${dt(x1)} · Return <b class="${cl(s.net)}">${f(s.net)}%</b> · Max DD <b class="n">${f(s.dd)}%</b> · Highest Equity bulan terakhir <b class="${lm&&lm.nh>0?"p":""}">${lm?(lm.nh>0?"+":"")+f(lm.nh)+"% ("+MF(lm)+")":"–"}</b> · Puncak kumulatif <b class="${cl(s.peakPct)}">${s.peakPct>=0?"+":""}${f(s.peakPct)}%</b> · Profitable stock <b class="${s.psPct>=50?"p":"n"}">${f(s.psPct,1)}%</b></p>
+  <svg viewBox="0 0 ${W} 410"><defs><linearGradient id="g" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="var(--c7)" stop-opacity=".35"/><stop offset="1" stop-color="var(--c6)" stop-opacity="0"/></linearGradient><linearGradient id="s" x1="0" x2="1"><stop offset="0" stop-color="var(--c6)"/><stop offset="1" stop-color="var(--c35)"/></linearGradient></defs>
+  ${[0,1,2,3].map(i=>`<line x1="0" x2="${W}" y1="${25+i*70}" y2="${25+i*70}" stroke="var(--c3)" stroke-dasharray="3 5"/>`).join("")}
+  <path d="${ln}L${W} ${H}L0 ${H}Z" fill="url(#g)"/><path class="ln" pathLength="1" d="${ln}" fill="none" stroke="url(#s)" stroke-width="2.4"/>
+  <text x="4" y="16" fill="var(--c5)" font-size="12">Ekuitas ${f(mx,2)}x</text><text x="4" y="${H-8}" fill="var(--c5)" font-size="12">${f(mn,2)}x</text>${s.peak>1?`<circle cx="${px.toFixed(1)}" cy="${py.toFixed(1)}" r="4.5" fill="var(--c31)" stroke="var(--c0)" stroke-width="1.5"/><text x="${(pl=="end"?px-8:px+8).toFixed(1)}" y="${Math.max(12,py-8).toFixed(1)}" text-anchor="${pl}" fill="var(--c31)" font-size="12">Puncak +${f(s.peakPct)}%</text>`:""}
+  <path d="${dd}" fill="var(--c37)" stroke="var(--c36)"/><text x="4" y="336" fill="var(--c5)" font-size="12">Drawdown (maks ${f(s.dd)}%)</text></svg></div>`}
+}
+// ===== Events =====
+document.querySelector("nav").onclick=e=>{const a=e.target.closest("a");if(a){S.v=a.dataset.v;draw()}};
+$("view").onclick=e=>{const c=e.target.closest("[data-pf]");if(c){S.pf=c.dataset.pf;draw();return}
+ const yfb=e.target.closest("[data-yf]");if(yfb){S.yf=yfb.dataset.yf;draw();return}
+ const mob=e.target.closest("[data-mo]");if(mob){S.mo=+mob.dataset.mo;draw();return}
+ const t=e.target.closest(".tile");if(t){S.fl=t.dataset.t;S.v="hist";draw();return}
+ const cf=e.target.closest("[data-cf]");if(cf){S.cf=cf.dataset.cf;draw();return}
+ const sr=e.target.closest(".srow");if(sr){S.sel=sr.dataset.t;draw();return}
+ const tr=e.target.closest("tbody tr");if(tr){const bb=tr.querySelector("b"),tt=bb&&bb.textContent.replace(".JK","").trim();if(tt&&S.R.find(x=>x.t==tt)){S.sel=tt;renderSel();return}}
+ const th=e.target.closest("th[data-k]");if(th){S.sd=S.sk==th.dataset.k?-S.sd:-1;S.sk=th.dataset.k;draw()}};
+$("mq").onclick=e=>{const i=e.target.closest(".it");if(i)pickSel(i.dataset.t)};
+$("view").oninput=e=>{if(e.target.id=="sq"){S.q=e.target.value;draw()}};
+$("bYf").onclick=yahoo;$("bSn").onclick=snapshot;$("bTh").onclick=toggleTheme;applyTheme(document.documentElement.getAttribute("data-theme")||"light",false);$("bMs").onclick=yahooMissing;$("bDm").onclick=dummy;$("bRc").onclick=()=>Object.keys(S.raw).length?recompute():yahoo();
+$("bUp").onclick=()=>$("fl").click();$("fl").onchange=e=>e.target.files[0]&&upload(e.target.files[0]);
+$("rng").onchange=()=>yahoo();
+$("per").onchange=$("lvl").onchange=()=>Object.keys(S.raw).length&&recompute();
+window.addEventListener("load",()=>{const fx=document.createElement("div");fx.className="fx";
+ fx.innerHTML=Array.from({length:12},(_,i)=>`<span style="left:${(i*8.5+Math.random()*5).toFixed(0)}%;font-size:${12+Math.random()*6|0}px;animation-duration:${18+Math.random()*20|0}s;animation-delay:-${Math.random()*30|0}s">${["📈","💰","🐂","🚀","💎","✨"][i%6]}</span>`).join("");
+ document.body.prepend(fx);
+ cacheGet().then(l=>{if(l&&l.raw&&Object.keys(l.raw).length){S.raw=l.raw;S.ds={upd:[],cache:Object.keys(l.raw),miss:TK.filter(t=>!l.raw[t])};S.src="cache tersimpan ("+new Date(l.t).toLocaleString("id-ID")+") — sedang memperbarui…";recompute()}}).catch(()=>{}).then(()=>yahoo());setInterval(()=>{if(!S.busy&&document.visibilityState==="visible")yahoo()},30*60*1000)});
+</script></body></html>
